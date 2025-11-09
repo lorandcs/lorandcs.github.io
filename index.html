@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatvizualizációs Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #675193 0%, #ca8861 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(103, 81, 147, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(103, 81, 147, 0.1);
+        }
+
+        .chart-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(103, 81, 147, 0.4);
+            border-color: rgba(202, 136, 97, 0.3);
+        }
+
+        .chart-title {
+            font-size: 1.5rem;
+            color: #675193;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #675193;
+            font-weight: 600;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .chart-container canvas,
+        .chart-container svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .chart-wrapper {
+            background: linear-gradient(to bottom, rgba(103, 81, 147, 0.03), rgba(202, 136, 97, 0.03));
+            border-radius: 10px;
+            padding: 15px;
+            transition: background 0.3s ease;
+            border: 1px solid rgba(103, 81, 147, 0.1);
+        }
+
+        .chart-card:hover .chart-wrapper {
+            background: linear-gradient(to bottom, rgba(103, 81, 147, 0.06), rgba(202, 136, 97, 0.06));
+            border-color: rgba(103, 81, 147, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .chart-card {
+                padding: 20px;
+            }
+
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 0.9rem;
+            }
+
+            .chart-container {
+                height: 200px;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Adatvizualizációs Dashboard</h1>
+            <p class="subtitle">US Population Distribution - 2000</p>
+        </header>
+
+        <div class="charts-grid">
+            <!-- Chart 1: Bar Chart -->
+            <div class="chart-card">
+                <h2 class="chart-title">Population by Age and Gender</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-container" id="chart1"></div>
+                </div>
+            </div>
+
+            <!-- Chart 2: Normalized Bar Chart -->
+            <div class="chart-card">
+                <h2 class="chart-title">Population Distribution (Normalized)</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-container" id="chart2"></div>
+                </div>
+            </div>
+
+            <!-- Chart 3: Population Pyramid -->
+            <div class="chart-card">
+                <h2 class="chart-title">Population Pyramid</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-container" id="chart3"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Data Visualization Dashboard</p>
+        </footer>
+    </div>
+
+    <script>
+        // Chart 1: Bar Chart
+        const spec1 = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+          "description": "A bar chart showing the US population distribution of age groups and gender in 2000.",
+          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
+          "transform": [
+            {"filter": "datum.year == 2000"},
+            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
+          ],
+          "width": "container",
+          "height": 250,
+          "autosize": {"type": "fit", "contains": "padding"},
+          "mark": "bar",
+          "encoding": {
+            "x": {"field": "age", "type": "ordinal", "axis": {"labelAngle": -45}},
+            "y": {
+              "aggregate": "sum", "field": "people",
+              "title": "population",
+              "stack": null
+            },
+            "color": {
+              "field": "gender",
+              "scale": {"range": ["#675193", "#ca8861"]}
+            },
+            "opacity": {"value": 0.7}
+          }
+        };
+
+        // Chart 2: Normalized Bar Chart
+        const spec2 = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
+          "transform": [
+            {"filter": "datum.year == 2000"},
+            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
+          ],
+          "width": "container",
+          "height": 250,
+          "autosize": {"type": "fit", "contains": "padding"},
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "aggregate": "sum", "field": "people",
+              "title": "population",
+              "stack":  "normalize"
+            },
+            "x": {"field": "age", "axis": {"labelAngle": -45}},
+            "color": {
+              "field": "gender",
+              "scale": {"range": ["#675193", "#ca8861"]}
+            }
+          }
+        };
+
+        // Chart 3: Population Pyramid
+        const spec3 = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+          "description": "A population pyramid for the US in 2000, created using stack. See https://vega.github.io/vega-lite/examples/concat_population_pyramid.html for a variant of this created using concat.",
+          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
+          "transform": [
+            {"filter": "datum.year == 2000"},
+            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"},
+            {"calculate": "datum.sex == 2 ? -datum.people : datum.people", "as": "signed_people"}
+          ],
+          "width": "container",
+          "height": 250,
+          "autosize": {"type": "fit", "contains": "padding"},
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "age",
+              "axis": null, "sort": "descending"
+            },
+            "x": {
+              "aggregate": "sum", "field": "signed_people",
+              "title": "population",
+              "axis": {"format": "s"}
+            },
+            "color": {
+              "field": "gender",
+              "scale": {"range": ["#675193", "#ca8861"]},
+              "legend": {"orient": "top", "title": null}
+            }
+          },
+          "config": {
+            "view": {"stroke": null},
+            "axis": {"grid": false}
+          }
+        };
+
+        // Embed charts with responsive sizing
+        vegaEmbed('#chart1', spec1, {actions: false, mode: 'vega-lite'});
+        vegaEmbed('#chart2', spec2, {actions: false, mode: 'vega-lite'});
+        vegaEmbed('#chart3', spec3, {actions: false, mode: 'vega-lite'});
+    </script>
+</body>
+</html>
+
