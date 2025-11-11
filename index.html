@@ -198,6 +198,10 @@
           "width": "container",
           "height": 250,
           "autosize": {"type": "fit", "contains": "padding"},
+          "params": [
+            {"name": "grid", "select": {"type": "interval", "bind": "scales"}},
+            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
+          ],
           "mark": "bar",
           "encoding": {
             "x": {"field": "age", "type": "ordinal", "axis": {"labelAngle": -45}},
@@ -210,7 +214,12 @@
               "field": "gender",
               "scale": {"range": ["#675193", "#ca8861"]}
             },
-            "opacity": {"value": 0.7}
+            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
+            "tooltip": [
+              {"field": "age", "type": "ordinal", "title": "Age"},
+              {"field": "gender", "type": "nominal", "title": "Gender"},
+              {"aggregate": "sum", "field": "people", "title": "Population"}
+            ]
           }
         };
 
@@ -225,6 +234,10 @@
           "width": "container",
           "height": 250,
           "autosize": {"type": "fit", "contains": "padding"},
+          "params": [
+            {"name": "grid", "select": {"type": "interval", "bind": "scales"}},
+            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
+          ],
           "mark": "bar",
           "encoding": {
             "y": {
@@ -236,7 +249,13 @@
             "color": {
               "field": "gender",
               "scale": {"range": ["#675193", "#ca8861"]}
-            }
+            },
+            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
+            "tooltip": [
+              {"field": "age", "type": "ordinal", "title": "Age"},
+              {"field": "gender", "type": "nominal", "title": "Gender"},
+              {"aggregate": "sum", "field": "people", "title": "Population (%)"}
+            ]
           }
         };
 
@@ -253,6 +272,10 @@
           "width": "container",
           "height": 250,
           "autosize": {"type": "fit", "contains": "padding"},
+          "params": [
+            {"name": "grid", "select": {"type": "interval", "encodings": ["x"], "bind": "scales"}},
+            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
+          ],
           "mark": "bar",
           "encoding": {
             "y": {
@@ -268,7 +291,13 @@
               "field": "gender",
               "scale": {"range": ["#675193", "#ca8861"]},
               "legend": {"orient": "top", "title": null}
-            }
+            },
+            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
+            "tooltip": [
+              {"field": "age", "type": "ordinal", "title": "Age"},
+              {"field": "gender", "type": "nominal", "title": "Gender"},
+              {"aggregate": "sum", "field": "signed_people", "title": "Population"}
+            ]
           },
           "config": {
             "view": {"stroke": null},
@@ -283,4 +312,3 @@
     </script>
 </body>
 </html>
-
