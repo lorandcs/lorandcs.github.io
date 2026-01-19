@@ -1,0 +1,826 @@
+Title,Year,Country,Budget,Revenue,Genre
+Avatar,2009,United States of America,237000000,2787965087,Action
+Titanic,1997,United States of America,200000000,1845034188,Drama
+The Avengers,2012,United States of America,220000000,1519557910,Science Fiction
+Jurassic World,2015,United States of America,150000000,1513528810,Action
+Furious 7,2015,Japan,190000000,1506249360,Action
+Avengers: Age of Ultron,2015,United States of America,280000000,1405403694,Action
+Frozen,2013,United States of America,150000000,1274219009,Animation
+Iron Man 3,2013,China,200000000,1215439994,Action
+Minions,2015,United States of America,74000000,1156730962,Family
+Captain America: Civil War,2016,United States of America,250000000,1153304495,Adventure
+Transformers: Dark of the Moon,2011,United States of America,195000000,1123746996,Action
+The Lord of the Rings: The Return of the King,2003,New Zealand,94000000,1118888979,Adventure
+Skyfall,2012,United Kingdom,200000000,1108561013,Action
+Transformers: Age of Extinction,2014,United States of America,210000000,1091405097,Science Fiction
+The Dark Knight Rises,2012,United States of America,250000000,1084939099,Action
+Toy Story 3,2010,United States of America,200000000,1066969703,Animation
+Pirates of the Caribbean: Dead Man's Chest,2006,Jamaica,200000000,1065659812,Adventure
+Pirates of the Caribbean: On Stranger Tides,2011,United States of America,380000000,1045713802,Adventure
+Alice in Wonderland,2010,United States of America,200000000,1025491110,Family
+The Hobbit: An Unexpected Journey,2012,New Zealand,250000000,1021103568,Adventure
+The Dark Knight,2008,United Kingdom,185000000,1004558444,Drama
+Harry Potter and the Philosopher's Stone,2001,United Kingdom,125000000,976475550,Adventure
+Despicable Me 2,2013,United States of America,76000000,970761885,Animation
+The Jungle Book,2016,United Kingdom,175000000,966550600,Family
+Pirates of the Caribbean: At World's End,2007,United States of America,300000000,961000000,Adventure
+The Hobbit: The Desolation of Smaug,2013,New Zealand,250000000,958400000,Adventure
+The Hobbit: The Battle of the Five Armies,2014,New Zealand,250000000,956019788,Action
+Finding Nemo,2003,United States of America,94000000,940335536,Animation
+Harry Potter and the Order of the Phoenix,2007,United Kingdom,150000000,938212738,Adventure
+Harry Potter and the Half-Blood Prince,2009,United Kingdom,250000000,933959197,Adventure
+The Lord of the Rings: The Two Towers,2002,New Zealand,79000000,926287400,Adventure
+Star Wars: Episode I - The Phantom Menace,1999,United States of America,115000000,924317558,Adventure
+Jurassic Park,1993,United States of America,63000000,920100000,Adventure
+Shrek 2,2004,United States of America,150000000,919838758,Adventure
+Harry Potter and the Goblet of Fire,2005,United Kingdom,150000000,895921036,Adventure
+Spider-Man 3,2007,United States of America,258000000,890871626,Fantasy
+Ice Age: Dawn of the Dinosaurs,2009,United States of America,90000000,886686817,Animation
+Spectre,2015,United Kingdom,245000000,880674609,Action
+Ice Age: Continental Drift,2012,United States of America,95000000,877244782,Animation
+Harry Potter and the Chamber of Secrets,2002,Germany,100000000,876688482,Adventure
+The Secret Life of Pets,2016,United States of America,75000000,875958308,Animation
+Batman v Superman: Dawn of Justice,2016,United States of America,250000000,873260194,Action
+The Lord of the Rings: The Fellowship of the Ring,2001,New Zealand,93000000,871368364,Adventure
+Inside Out,2015,United States of America,175000000,857611174,Drama
+Star Wars: Episode III - Revenge of the Sith,2005,United States of America,113000000,850000000,Science Fiction
+The Hunger Games: Catching Fire,2013,United States of America,130000000,847423452,Adventure
+Transformers: Revenge of the Fallen,2009,United States of America,150000000,836297228,Science Fiction
+The Twilight Saga: Breaking Dawn - Part 2,2012,United States of America,120000000,829000000,Adventure
+Inception,2010,United Kingdom,160000000,825532764,Action
+Spider-Man,2002,United States of America,139000000,821708551,Fantasy
+Independence Day,1996,United States of America,75000000,816969268,Action
+Shrek the Third,2007,United States of America,160000000,798958165,Fantasy
+E.T. the Extra-Terrestrial,1982,United States of America,10500000,792910554,Science Fiction
+Harry Potter and the Prisoner of Azkaban,2004,United Kingdom,130000000,789804554,Adventure
+The Lion King,1994,United States of America,45000000,788241776,Family
+Indiana Jones and the Kingdom of the Crystal Skull,2008,United States of America,185000000,786636033,Adventure
+Spider-Man 2,2004,United States of America,200000000,783766341,Action
+Deadpool,2016,United States of America,58000000,783112979,Action
+Star Wars,1977,United States of America,11000000,775398007,Adventure
+Guardians of the Galaxy,2014,United Kingdom,170000000,773328629,Action
+2012,2009,Canada,200000000,769653595,Action
+The Da Vinci Code,2006,United States of America,125000000,767820459,Thriller
+Maleficent,2014,United States of America,180000000,758539785,Fantasy
+Shrek Forever After,2010,United States of America,165000000,752600867,Comedy
+The Amazing Spider-Man,2012,United States of America,215000000,752215857,Action
+The Hunger Games: Mockingjay - Part 1,2014,United States of America,125000000,752100229,Science Fiction
+"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",2005,United Kingdom,180000000,748806957,Adventure
+X-Men: Days of Future Past,2014,United Kingdom,250000000,747862775,Action
+Madagascar 3: Europe's Most Wanted,2012,United States of America,145000000,746921274,Animation
+Suicide Squad,2016,United States of America,175000000,745000000,Action
+Monsters University,2013,United States of America,200000000,743559607,Animation
+The Matrix Reloaded,2003,Australia,150000000,738599701,Adventure
+Up,2009,United States of America,175000000,735099082,Animation
+Gravity,2013,United Kingdom,105000000,716392705,Science Fiction
+Captain America: The Winter Soldier,2014,United States of America,170000000,714766572,Action
+Dawn of the Planet of the Apes,2014,United States of America,170000000,710644566,Science Fiction
+The Twilight Saga: New Moon,2009,United States of America,50000000,709827462,Adventure
+Transformers,2007,United States of America,150000000,709709780,Adventure
+The Amazing Spider-Man 2,2014,United States of America,200000000,705717432,Action
+The Twilight Saga: Eclipse,2010,United States of America,68000000,698491347,Adventure
+Mission: Impossible - Ghost Protocol,2011,Czech Republic,145000000,694713380,Action
+The Hunger Games,2012,United States of America,75000000,691210692,Science Fiction
+Mission: Impossible - Rogue Nation,2015,China,150000000,682330139,Action
+Forrest Gump,1994,United States of America,55000000,677945399,Comedy
+Interstellar,2014,Canada,165000000,675120017,Adventure
+The Sixth Sense,1999,United States of America,40000000,672806292,Mystery
+Kung Fu Panda 2,2011,United States of America,150000000,665692281,Animation
+Man of Steel,2013,United Kingdom,225000000,662845518,Action
+Ice Age: The Meltdown,2006,United States of America,80000000,660940780,Animation
+Pirates of the Caribbean: The Curse of the Black Pearl,2003,United States of America,140000000,655011224,Adventure
+The Hunger Games: Mockingjay - Part 2,2015,Germany,160000000,653428261,Action
+Big Hero 6,2014,United States of America,165000000,652105443,Adventure
+Star Wars: Episode II - Attack of the Clones,2002,United States of America,120000000,649398328,Adventure
+Thor: The Dark World,2013,United States of America,170000000,644571402,Action
+Kung Fu Panda,2008,United States of America,130000000,631744560,Adventure
+The Incredibles,2004,United States of America,92000000,631442092,Action
+The Martian,2015,United States of America,108000000,630161890,Drama
+Fast Five,2011,United States of America,125000000,626137675,Action
+Hancock,2008,United States of America,150000000,624029371,Fantasy
+Men in Black 3,2012,United States of America,225000000,624026776,Action
+Iron Man 2,2010,United States of America,200000000,623933331,Adventure
+Ratatouille,2007,United States of America,150000000,623722818,Animation
+The Passion of the Christ,2004,United States of America,30000000,611899420,Drama
+Mamma Mia!,2008,Germany,52000000,609841637,Comedy
+How to Train Your Dragon 2,2014,United States of America,145000000,609123048,Fantasy
+Life of Pi,2012,United States of America,120000000,609016565,Adventure
+Madagascar: Escape 2 Africa,2008,United States of America,150000000,603900354,Family
+Casino Royale,2006,Italy,150000000,599045960,Adventure
+Tangled,2010,United States of America,260000000,591794936,Animation
+War of the Worlds,2005,United States of America,132000000,591739379,Adventure
+Men in Black,1997,United States of America,90000000,589390539,Action
+Quantum of Solace,2008,United Kingdom,200000000,586090727,Adventure
+I Am Legend,2007,United States of America,150000000,585349010,Drama
+The Croods,2013,United States of America,135000000,585178928,Adventure
+Iron Man,2008,United States of America,140000000,585174222,Action
+Night at the Museum,2006,United States of America,110000000,574480841,Action
+Return of the Jedi,1983,United States of America,32350000,572700000,Adventure
+Fifty Shades of Grey,2015,United States of America,40000000,571006128,Drama
+The Smurfs,2011,United States of America,110000000,563749323,Animation
+"Monsters, Inc.",2001,United States of America,115000000,562816256,Animation
+Cars 2,2011,United States of America,200000000,559852396,Animation
+Puss in Boots,2011,United States of America,130000000,554987477,Action
+Armageddon,1998,United States of America,140000000,553799566,Action
+King Kong,2005,New Zealand,207000000,550000000,Adventure
+Ted,2012,United States of America,50000000,549368315,Comedy
+Mission: Impossible II,2000,Germany,125000000,546388105,Adventure
+The Day After Tomorrow,2004,United States of America,125000000,544272402,Action
+X-Men: Apocalypse,2016,United States of America,178000000,543934787,Science Fiction
+Cinderella,2015,United Kingdom,95000000,543514353,Romance
+Despicable Me,2010,United States of America,69000000,543513985,Animation
+American Sniper,2014,United States of America,58800000,542307423,War
+Brave,2012,United States of America,185000000,538983207,Animation
+The Empire Strikes Back,1980,United States of America,18000000,538400000,Adventure
+The Revenant,2015,Canada,135000000,532950503,Western
+Madagascar,2005,United States of America,75000000,532680671,Family
+World War Z,2013,United States of America,200000000,531865000,Action
+The Simpsons Movie,2007,United States of America,75000000,527068851,Animation
+Sherlock Holmes,2009,Germany,90000000,524028679,Action
+WALL·E,2008,United States of America,180000000,521311860,Animation
+Kung Fu Panda 3,2016,China,145000000,521170825,Action
+Terminator 2: Judgment Day,1991,France,100000000,520000000,Action
+Ant-Man,2015,United States of America,130000000,519311965,Science Fiction
+Meet the Fockers,2004,United States of America,80000000,516642939,Comedy
+Ghost,1990,United States of America,22000000,505000000,Fantasy
+Aladdin,1992,United States of America,28000000,504050219,Animation
+Rio 2,2014,United States of America,103000000,500188435,Animation
+Troy,2004,United States of America,175000000,497409852,Adventure
+Toy Story 2,1999,United States of America,90000000,497366869,Animation
+How to Train Your Dragon,2010,United States of America,165000000,494878759,Fantasy
+Twister,1996,United States of America,92000000,494471524,Action
+Oz: The Great and Powerful,2013,United States of America,200000000,491868548,Fantasy
+Rio,2011,United States of America,90000000,484635760,Animation
+Bruce Almighty,2003,United States of America,80000000,484572835,Fantasy
+Shrek,2001,United States of America,60000000,484409218,Adventure
+Rise of the Planet of the Apes,2011,United States of America,93000000,482860185,Thriller
+Saving Private Ryan,1998,United States of America,70000000,481840909,Drama
+Mr. & Mrs. Smith,2005,United States of America,110000000,478207520,Action
+Teenage Mutant Ninja Turtles,2014,United States of America,125000000,477200000,Science Fiction
+Home Alone,1990,United States of America,18000000,476684675,Comedy
+Charlie and the Chocolate Factory,2005,Australia,150000000,474968763,Adventure
+Indiana Jones and the Last Crusade,1989,United States of America,48000000,474171806,Adventure
+Hotel Transylvania 2,2015,United States of America,80000000,473226958,Animation
+Wreck-It Ralph,2012,United States of America,165000000,471222889,Family
+Jaws,1975,United States of America,7000000,470654000,Horror
+San Andreas,2015,Canada,110000000,470490832,Action
+The Lego Movie,2014,United States of America,60000000,469160692,Adventure
+Star Trek Into Darkness,2013,United States of America,190000000,467365246,Action
+The Matrix,1999,Australia,63000000,463517383,Action
+Pretty Woman,1990,United States of America,14000000,463000000,Romance
+Cars,2006,United States of America,120000000,461983149,Animation
+X-Men: The Last Stand,2006,Canada,210000000,459359555,Adventure
+The Hangover,2009,Germany,35000000,459270619,Comedy
+Mission: Impossible,1996,United States of America,80000000,457696359,Adventure
+Gladiator,2000,United Kingdom,103000000,457640427,Action
+The Last Samurai,2003,Japan,140000000,456758981,Drama
+Ocean's Eleven,2001,United States of America,85000000,450717150,Thriller
+Thor,2011,United States of America,150000000,449326618,Adventure
+Pearl Harbor,2001,United States of America,140000000,449220945,History
+Alvin and the Chipmunks: The Squeakquel,2009,United States of America,75000000,443140005,Comedy
+The Bourne Ultimatum,2007,Germany,70000000,442824138,Action
+Men in Black II,2002,United States of America,140000000,441818803,Action
+Les Misérables,2012,United Kingdom,61000000,441809770,Drama
+The Exorcist,1973,United States of America,8000000,441306145,Drama
+Mrs. Doubtfire,1993,United States of America,25000000,441286195,Comedy
+Terminator Genisys,2015,United States of America,155000000,440603537,Science Fiction
+Terminator 3: Rise of the Machines,2003,Germany,200000000,435000000,Action
+Warcraft,2016,Canada,160000000,433677183,Action
+The Mummy Returns,2001,United States of America,98000000,433013274,Adventure
+Die Another Day,2002,United Kingdom,140000000,431971116,Adventure
+Cast Away,2000,United States of America,90000000,429632142,Adventure
+Django Unchained,2012,United States of America,100000000,425368238,Drama
+The Matrix Revolutions,2003,United States of America,150000000,424988211,Adventure
+Dances with Wolves,1990,United Kingdom,22000000,424208848,Adventure
+300,2006,United States of America,65000000,422610419,Action
+The Chronicles of Narnia: Prince Caspian,2008,Czech Republic,225000000,419651413,Adventure
+The Chronicles of Narnia: The Voyage of the Dawn Treader,2010,United States of America,155000000,415686217,Adventure
+Jason Bourne,2016,United Kingdom,120000000,415484914,Action
+The Wolverine,2013,United Kingdom,120000000,415440673,Action
+The King's Speech,2010,United Kingdom,15000000,414211549,Drama
+Night at the Museum: Battle of the Smithsonian,2009,United States of America,150000000,413106170,Adventure
+Rain Man,1988,United States of America,25000000,412800000,Drama
+Batman,1989,United Kingdom,35000000,411348924,Fantasy
+The Bodyguard,1992,United States of America,25000000,411006740,Thriller
+Signs,2002,United States of America,72000000,408247917,Drama
+X2,2003,United States of America,110000000,407711549,Adventure
+Pacific Rim,2013,United States of America,180000000,407602906,Action
+Prometheus,2012,United Kingdom,130000000,403170142,Science Fiction
+The Mummy: Tomb of the Dragon Emperor,2008,Germany,145000000,401128639,Adventure
+Gone with the Wind,1939,United States of America,4000000,400176459,Drama
+TRON: Legacy,2010,United States of America,170000000,400062763,Adventure
+Mission: Impossible III,2006,China,150000000,397850012,Adventure
+Snow White and the Huntsman,2012,United States of America,170000000,396600000,Adventure
+Twilight,2008,United States of America,37000000,392616625,Adventure
+The Wolf of Wall Street,2013,United States of America,100000000,392000694,Crime
+Superman Returns,2006,United States of America,270000000,391081192,Adventure
+Robin Hood: Prince of Thieves,1991,United States of America,48000000,390493908,Adventure
+Raiders of the Lost Ark,1981,United States of America,18000000,389925971,Adventure
+Independence Day: Resurgence,2016,United States of America,165000000,389681935,Action
+Star Trek,2009,Germany,150000000,385680446,Science Fiction
+Happy Feet,2006,Australia,100000000,384335608,Animation
+Live Free or Die Hard,2007,United Kingdom,110000000,383531464,Action
+Ice Age,2002,United States of America,59000000,383257136,Animation
+Monsters vs Aliens,2009,United States of America,175000000,381509870,Animation
+Back to the Future,1985,United States of America,19000000,381109762,Adventure
+True Lies,1994,United States of America,115000000,378882411,Action
+Mad Max: Fury Road,2015,Australia,150000000,378858340,Action
+Slumdog Millionaire,2008,India,15000000,377910544,Drama
+Taken 2,2012,France,45000000,376141306,Action
+Batman Begins,2005,United Kingdom,150000000,374218673,Action
+What Women Want,2000,United States of America,70000000,374111707,Comedy
+Toy Story,1995,United States of America,30000000,373554033,Animation
+Penguins of Madagascar,2014,United States of America,132000000,373552094,Family
+X-Men Origins: Wolverine,2009,United States of America,150000000,373062864,Adventure
+The Golden Compass,2007,United Kingdom,180000000,372234864,Adventure
+The Adventures of Tintin,2011,New Zealand,130000000,371940071,Adventure
+G.I. Joe: Retaliation,2013,United States of America,130000000,371876278,Adventure
+Terminator Salvation,2009,Germany,200000000,371353001,Action
+Captain America: The First Avenger,2011,United States of America,140000000,370569774,Action
+Edge of Tomorrow,2014,Australia,178000000,370541256,Action
+There's Something About Mary,1998,United States of America,23000000,369884651,Romance
+Gone Girl,2014,United States of America,61000000,369330363,Mystery
+The Fugitive,1993,United States of America,44000000,368875760,Adventure
+Home,2015,United States of America,135000000,368871007,Fantasy
+Jurassic Park III,2001,United States of America,93000000,368780809,Adventure
+My Big Fat Greek Wedding,2002,Canada,5000000,368744044,Comedy
+Hitch,2005,United States of America,70000000,368100420,Comedy
+Shark Tale,2004,United States of America,75000000,367275019,Animation
+Die Hard: With a Vengeance,1995,United States of America,90000000,366101666,Action
+Notting Hill,1999,United Kingdom,42000000,363889678,Romance
+A Bug's Life,1998,United States of America,120000000,363258859,Adventure
+Ocean's Twelve,2004,United States of America,110000000,362744280,Thriller
+Noah,2014,United States of America,125000000,362637473,Drama
+Planet of the Apes,2001,United States of America,100000000,362211740,Thriller
+The World Is Not Enough,1999,United Kingdom,135000000,361832400,Adventure
+Alvin and the Chipmunks,2007,United States of America,60000000,361366633,Comedy
+Home Alone 2: Lost in New York,1992,United States of America,18000000,358991681,Comedy
+Hotel Transylvania,2012,United States of America,85000000,358375603,Animation
+Minority Report,2002,United States of America,102000000,358372926,Action
+Top Gun,1986,United States of America,15000000,356830601,Action
+The Legend of Tarzan,2016,Canada,180000000,356743061,Action
+Angels & Demons,2009,Italy,150000000,356613439,Thriller
+American Beauty,1999,United States of America,15000000,356296601,Drama
+Journey 2: The Mysterious Island,2012,United States of America,79000000,355692760,Adventure
+Apollo 13,1995,United States of America,52000000,355237933,Drama
+Dinosaur,2000,United States of America,127500000,354248063,Animation
+X-Men: First Class,2011,United States of America,160000000,353624124,Action
+GoldenEye,1995,United Kingdom,58000000,352194034,Adventure
+Catch Me If You Can,2002,United States of America,52000000,352114312,Drama
+The Mask,1994,United States of America,23000000,351583407,Romance
+The Great Gatsby,2013,United States of America,105000000,351040419,Drama
+Speed,1994,United States of America,30000000,350448145,Action
+The Angry Birds Movie,2016,Finland,73000000,349779543,Family
+Night at the Museum: Secret of the Tomb,2014,United Kingdom,127000000,349424282,Adventure
+The Maze Runner,2014,United States of America,34000000,348319861,Action
+National Treasure,2004,United States of America,100000000,347451894,Adventure
+The Smurfs 2,2013,United States of America,105000000,347434178,Fantasy
+Rush Hour 2,2001,United States of America,90000000,347325802,Action
+"I, Robot",2004,United States of America,120000000,347234916,Action
+Pocahontas,1995,United States of America,55000000,346079773,Adventure
+How the Grinch Stole Christmas,2000,Germany,123000000,345141403,Family
+Star Trek Beyond,2016,United States of America,185000000,343471816,Action
+Over the Hedge,2006,United States of America,80000000,343397247,Comedy
+Alvin and the Chipmunks: Chipwrecked,2011,United States of America,75000000,342695435,Comedy
+The Flintstones,1994,United States of America,46000000,341631208,Fantasy
+Enchanted,2007,United States of America,85000000,340487652,Comedy
+300: Rise of an Empire,2014,United States of America,110000000,337580051,Action
+Batman Forever,1995,United Kingdom,100000000,336529144,Action
+Prince of Persia: The Sands of Time,2010,United States of America,150000000,335154643,Adventure
+The Rock,1996,United States of America,75000000,335062621,Action
+Now You See Me 2,2016,Canada,90000000,334901337,Action
+Sherlock Holmes: A Game of Shadows,2011,United States of America,125000000,334615000,Adventure
+The Curious Case of Benjamin Button,2008,United States of America,150000000,333932083,Fantasy
+Tomorrow Never Dies,1997,United Kingdom,110000000,333011068,Adventure
+Indiana Jones and the Temple of Doom,1984,United States of America,28000000,333000000,Adventure
+Back to the Future Part II,1989,United States of America,40000000,332000000,Adventure
+The Good Dinosaur,2015,United States of America,175000000,331926147,Adventure
+Meet the Parents,2000,United States of America,55000000,330444045,Comedy
+Crocodile Dundee,1986,Australia,5000000,328203506,Adventure
+Black Swan,2010,United States of America,13000000,327803731,Drama
+Se7en,1995,United States of America,33000000,327311859,Crime
+The Devil Wears Prada,2006,United States of America,35000000,326551094,Comedy
+Taken 3,2014,France,48000000,325771424,Thriller
+The Perfect Storm,2000,United States of America,120000000,325756637,Drama
+A Christmas Carol,2009,United States of America,200000000,325233863,Animation
+Megamind,2010,United States of America,130000000,321887208,Animation
+Lethal Weapon 3,1992,United States of America,35000000,321731527,Adventure
+Schindler's List,1993,United States of America,22000000,321365567,Drama
+The Conjuring 2,2016,Canada,40000000,320170008,Horror
+Fatal Attraction,1987,United States of America,14000000,320145693,Drama
+Inglourious Basterds,2009,Germany,70000000,319131050,Drama
+The Last Airbender,2010,United States of America,150000000,318502923,Action
+The Conjuring,2013,United States of America,13000000,318000141,Horror
+The Proposal,2009,United States of America,40000000,317375031,Comedy
+Beverly Hills Cop,1984,United States of America,15000000,316360478,Action
+Air Force One,1997,Germany,85000000,315156409,Action
+Chicken Little,2005,United States of America,150000000,314432665,Animation
+As Good as It Gets,1997,United States of America,50000000,314178011,Comedy
+A Beautiful Mind,2001,United States of America,60000000,313542341,Drama
+The Expendables 2,2012,United States of America,100000000,312573423,Action
+The SpongeBob Movie: Sponge Out of Water,2015,United States of America,74000000,311594032,Animation
+Ocean's Thirteen,2007,United States of America,85000000,311312624,Crime
+Maze Runner: The Scorch Trials,2015,United States of America,61000000,311256926,Action
+Austin Powers: The Spy Who Shagged Me,1999,United States of America,33000000,310940086,Adventure
+Robin Hood,2010,United Kingdom,200000000,310669540,Action
+Little Fockers,2010,United States of America,100000000,310650585,Comedy
+Bolt,2008,United States of America,150000000,309979994,Animation
+Ransom,1996,United States of America,80000000,309492681,Action
+Runaway Bride,1999,United States of America,70000000,309457509,Comedy
+The Blind Side,2009,United States of America,29000000,309208309,Drama
+The Fault in Our Stars,2014,United States of America,12000000,307166834,Romance
+The Pursuit of Happyness,2006,United States of America,55000000,307077295,Drama
+Rise of the Guardians,2012,United States of America,145000000,306941670,Fantasy
+Chicago,2002,United States of America,45000000,306776732,Action
+The Polar Express,2004,United States of America,165000000,305875730,Adventure
+A Good Day to Die Hard,2013,United States of America,92000000,304654182,Action
+Mulan,1998,United States of America,90000000,304320254,Animation
+Close Encounters of the Third Kind,1977,United States of America,20000000,303788635,Science Fiction
+Battleship,2012,United States of America,209000000,303025485,Thriller
+G.I. Joe: The Rise of Cobra,2009,Czech Republic,175000000,302469017,Adventure
+Independence Day,1996,United States of America,75000000,306169268,Action
+Grown Ups 2,2013,United States of America,80000000,246984278,Comedy
+Miss Peregrine's Home for Peculiar Children,2016,United Kingdom,110000000,296482446,Fantasy
+Salt,2010,United States of America,110000000,293503368,Action
+Alice Through the Looking Glass,2016,United States of America,170000000,299370084,Fantasy
+Ghostbusters,2016,United States of America,144000000,229147509,Action
+10 Cloverfield Lane,2016,United States of America,15000000,108286421,Thriller
+Lights Out,2016,United States of America,4900000,148868835,Horror
+Nerve,2016,United States of America,20000000,83707310,Mystery
+The Shallows,2016,United States of America,17000000,119100758,Drama
+Don't Breathe,2016,United States of America,9900000,153665314,Horror
+Me Before You,2016,United Kingdom,20000000,207945075,Drama
+Bad Moms,2016,United States of America,20000000,179357900,Comedy
+Sully,2016,United States of America,60000000,238470033,Drama
+The Accountant,2016,United States of America,44000000,152569528,Crime
+Jack Reacher: Never Go Back,2016,China,60000000,162146076,Action
+Inferno,2016,United States of America,75000000,220021259,Thriller
+Doctor Strange,2016,United States of America,165000000,677718395,Action
+Arrival,2016,United States of America,47000000,162237003,Thriller
+Fantastic Beasts and Where to Find Them,2016,United Kingdom,180000000,809342332,Adventure
+Moana,2016,United States of America,150000000,574068579,Animation
+Passengers,2016,United States of America,110000000,294520972,Drama
+Rogue One: A Star Wars Story,2016,United States of America,200000000,1056057273,Action
+Sing,2016,United States of America,75000000,432577978,Animation
+La La Land,2016,United States of America,30000000,345041530,Comedy
+Hidden Figures,2016,United States of America,25000000,165720233,Drama
+Split,2016,United States of America,9000000,246949826,Horror
+John Wick: Chapter 2,2017,United States of America,40000000,166893990,Action
+The LEGO Batman Movie,2017,United States of America,80000000,292025255,Animation
+Fifty Shades Darker,2017,United States of America,55000000,378827494,Drama
+Logan,2017,United States of America,97000000,616194302,Action
+Kong: Skull Island,2017,United States of America,185000000,561072059,Action
+Beauty and the Beast,2017,United States of America,160000000,1235761498,Family
+The Boss Baby,2017,United States of America,125000000,486542760,Animation
+The Fate of the Furious,2017,United States of America,250000000,1238764765,Action
+Guardians of the Galaxy Vol. 2,2017,United States of America,200000000,862410210,Action
+Alien: Covenant,2017,United Kingdom,97000000,232018898,Science Fiction
+Pirates of the Caribbean: Dead Men Tell No Tales,2017,United States of America,230000000,786480575,Adventure
+Wonder Woman,2017,United States of America,149000000,779021665,Action
+The Mummy,2017,United States of America,125000000,407778013,Adventure
+Cars 3,2017,United States of America,175000000,172914112,Animation
+Transformers: The Last Knight,2017,United States of America,217000000,605425157,Science Fiction
+Despicable Me 3,2017,United States of America,80000000,1034799409,Animation
+Spider-Man: Homecoming,2017,United States of America,175000000,880166924,Action
+War for the Planet of the Apes,2017,United States of America,150000000,489592267,Drama
+Dunkirk,2017,United Kingdom,100000000,525573161,War
+Valerian and the City of a Thousand Planets,2017,France,197000000,225164110,Adventure
+The Dark Tower,2017,United States of America,60000000,111782245,Fantasy
+Annabelle: Creation,2017,United States of America,15000000,305139038,Horror
+The Hitman's Bodyguard,2017,United States of America,30000000,176586701,Action
+It,2017,United States of America,35000000,697457969,Horror
+Kingsman: The Golden Circle,2017,United Kingdom,104000000,410902662,Action
+Blade Runner 2049,2017,United Kingdom,150000000,258163539,Science Fiction
+Thor: Ragnarok,2017,United States of America,180000000,853977126,Action
+Murder on the Orient Express,2017,United Kingdom,55000000,351683907,Drama
+Justice League,2017,United States of America,300000000,657924295,Action
+Coco,2017,United States of America,175000000,800526015,Animation
+Star Wars: The Last Jedi,2017,United States of America,200000000,1332539889,Action
+Jumanji: Welcome to the Jungle,2017,United States of America,90000000,962063427,Action
+The Greatest Showman,2017,United States of America,84000000,432844677,Drama
+Maze Runner: The Death Cure,2018,United States of America,62000000,288175335,Action
+Black Panther,2018,United States of America,200000000,1346739107,Action
+Pacific Rim: Uprising,2018,United States of America,150000000,290466035,Action
+Ready Player One,2018,United States of America,175000000,582218455,Adventure
+Rampage,2018,United States of America,120000000,428028233,Action
+Avengers: Infinity War,2018,United States of America,300000000,2046239637,Action
+Deadpool 2,2018,United States of America,110000000,785046920,Action
+Solo: A Star Wars Story,2018,United States of America,250000000,392924807,Action
+Ocean's 8,2018,United States of America,70000000,296860000,Crime
+Incredibles 2,2018,United States of America,200000000,1242805359,Action
+Jurassic World: Fallen Kingdom,2018,United States of America,170000000,1309484461,Action
+Ant-Man and the Wasp,2018,United States of America,162000000,622674139,Action
+Mission: Impossible - Fallout,2018,United States of America,178000000,791017452,Action
+The Meg,2018,United States of America,130000000,527847128,Action
+Crazy Rich Asians,2018,United States of America,30000000,238532921,Comedy
+The Nun,2018,United States of America,22000000,365550119,Horror
+Venom,2018,United States of America,100000000,855013954,Science Fiction
+A Star Is Born,2018,United States of America,36000000,433888866,Drama
+Halloween,2018,United States of America,10000000,253688035,Horror
+Bohemian Rhapsody,2018,United Kingdom,52000000,893116347,Drama
+Fantastic Beasts: The Crimes of Grindelwald,2018,United Kingdom,200000000,653355909,Adventure
+Ralph Breaks the Internet,2018,United States of America,175000000,529323962,Family
+Spider-Man: Into the Spider-Verse,2018,United States of America,90000000,375464627,Action
+Aquaman,2018,United States of America,160000000,1147661807,Action
+Bumblebee,2018,United States of America,135000000,467989645,Action
+Mary Poppins Returns,2018,United States of America,130000000,349537494,Fantasy
+Glass,2019,United States of America,20000000,246985576,Thriller
+The Lego Movie 2: The Second Part,2019,United States of America,99000000,191306508,Family
+Alita: Battle Angel,2019,United States of America,170000000,404852543,Action
+How to Train Your Dragon: The Hidden World,2019,United States of America,129000000,519758100,Animation
+Captain Marvel,2019,United States of America,152000000,1128274794,Action
+Us,2019,United States of America,20000000,254732150,Horror
+Dumbo,2019,United States of America,170000000,353166307,Adventure
+Shazam!,2019,United States of America,100000000,364571656,Action
+Avengers: Endgame,2019,United States of America,356000000,2797800564,Adventure
+Pokémon Detective Pikachu,2019,United States of America,150000000,431705346,Action
+John Wick: Chapter 3 - Parabellum,2019,United States of America,75000000,326709727,Action
+Aladdin,2019,United States of America,183000000,1050693953,Adventure
+Godzilla: King of the Monsters,2019,United States of America,170000000,385900138,Science Fiction
+X-Men: Dark Phoenix,2019,United States of America,200000000,252442974,Science Fiction
+Men in Black: International,2019,United States of America,110000000,253890701,Action
+Toy Story 4,2019,United States of America,200000000,1073394593,Animation
+Spider-Man: Far from Home,2019,United States of America,160000000,1131927996,Action
+The Lion King,2019,United States of America,260000000,1656943394,Adventure
+Fast & Furious Presents: Hobbs & Shaw,2019,United States of America,200000000,758910100,Action
+It Chapter Two,2019,United States of America,79000000,473093228,Horror
+Joker,2019,United States of America,55000000,1074251311,Crime
+Maleficent: Mistress of Evil,2019,United States of America,185000000,491515545,Fantasy
+Terminator: Dark Fate,2019,China,185000000,261119292,Science Fiction
+Frozen II,2019,United States of America,150000000,1450026933,Animation
+Knives Out,2019,United States of America,40000000,311398301,Mystery
+Jumanji: The Next Level,2019,United States of America,125000000,796575993,Adventure
+Star Wars: The Rise of Skywalker,2019,United States of America,275000000,1074144248,Action
+1917,2019,United Kingdom,100000000,368027644,War
+Bad Boys for Life,2020,United States of America,90000000,419074646,Thriller
+Birds of Prey,2020,United States of America,84500000,201858461,Action
+Sonic the Hedgehog,2020,Japan,85000000,306766470,Action
+The Invisible Man,2020,United States of America,7000000,122914050,Thriller
+Onward,2020,United States of America,175000000,104144008,Animation
+Tenet,2020,United Kingdom,205000000,363129000,Action
+Ted 2,2015,United States of America,68000000,217022588,Comedy
+Central Intelligence,2016,United States of America,50000000,216972543,Action
+Million Dollar Baby,2004,United States of America,30000000,216763646,Drama
+Twins,1988,United States of America,15000000,216614388,Comedy
+Valentine's Day,2010,United States of America,52000000,216485654,Comedy
+Bad Teacher,2011,United States of America,20000000,216197492,Comedy
+Clear and Present Danger,1994,United States of America,62000000,215887717,Action
+Dracula,1992,United States of America,40000000,215862692,Romance
+Vertical Limit,2000,New Zealand,75000000,215663859,Action
+Dracula Untold,2014,United States of America,70000000,215529201,Horror
+The Patriot,2000,Germany,110000000,215294342,Drama
+The Sorcerer's Apprentice,2010,United States of America,150000000,215283742,Fantasy
+8 Mile,2002,United States of America,41000000,215000000,Drama
+Just Go with It,2011,United States of America,80000000,214918407,Romance
+Public Enemies,2009,United States of America,80000000,214104620,History
+The Bourne Identity,2002,United States of America,60000000,214034224,Action
+Disclosure,1994,United States of America,55000000,214015089,Drama
+Pulp Fiction,1994,United States of America,8000000,213928762,Thriller
+"Crouching Tiger, Hidden Dragon",2000,China,17000000,213525736,Adventure
+Into the Woods,2014,United States of America,50000000,212902372,Fantasy
+Bedtime Stories,2008,United States of America,80000000,212874442,Fantasy
+Entrapment,1999,United Kingdom,66000000,212404396,Romance
+Ace Ventura: When Nature Calls,1995,United States of America,30000000,212385533,Crime
+Master and Commander: The Far Side of the World,2003,United States of America,150000000,212011111,Adventure
+Miss Congeniality,2000,United States of America,45000000,212000000,Comedy
+End of Days,1999,United States of America,100000000,211989043,Action
+Fury,2014,United Kingdom,68000000,211817906,War
+Due Date,2010,United States of America,65000000,211780824,Comedy
+Kingdom of Heaven,2005,Germany,130000000,211643158,Drama
+District 9,2009,United States of America,30000000,210819611,Science Fiction
+Moonraker,1979,France,34000000,210308099,Action
+Braveheart,1995,United States of America,72000000,210000000,Action
+Red Dragon,2002,Germany,78000000,209196298,Crime
+Tomorrowland,2015,United States of America,190000000,209154322,Adventure
+Safe House,2012,United States of America,85000000,208076205,Action
+Me Before You,2016,United States of America,20000000,207945075,Drama
+Traffic,2000,Germany,48000000,207515725,Thriller
+The Fast and the Furious,2001,Germany,38000000,207283925,Action
+Philadelphia,1993,United States of America,26000000,206678440,Drama
+The Expendables 3,2014,France,90000000,206172544,Action
+London Has Fallen,2016,Bulgaria,60000000,205754447,Action
+Silver Linings Playbook,2012,United States of America,21000000,205738714,Drama
+Paranormal Activity 3,2011,United States of America,5000000,205703818,Horror
+JFK,1991,United States of America,40000000,205405498,Drama
+White House Down,2013,United States of America,150000000,205366737,Action
+The Ugly Truth,2009,United States of America,38000000,205298907,Comedy
+The Break-Up,2006,United States of America,52000000,204999686,Romance
+Eat Pray Love,2010,United States of America,60000000,204594016,Drama
+Everest,2015,Iceland,55000000,203427584,Adventure
+Vanilla Sky,2001,United States of America,68000000,203388341,Drama
+Need for Speed,2014,Philippines,66000000,203277636,Action
+Battle: Los Angeles,2011,United States of America,70000000,202466756,Action
+Patch Adams,1998,United States of America,50000000,202292902,Comedy
+Fun with Dick and Jane,2005,United States of America,100000000,202026112,Comedy
+Kindergarten Cop,1990,United States of America,15000000,201957688,Comedy
+Straight Outta Compton,2015,United States of America,28000000,201634991,Drama
+You Don't Mess with the Zohan,2008,United States of America,90000000,201596308,Comedy
+21 Jump Street,2012,United States of America,42000000,201585328,Action
+Yogi Bear,2010,United States of America,80000000,201584141,Comedy
+Garfield,2004,United States of America,50000000,200804534,Animation
+Valkyrie,2008,Germany,75000000,200276000,Drama
+The Hunt for Red October,1990,United States of America,30000000,199200000,Action
+City of Angels,1998,United States of America,55000000,198685114,Drama
+Jack the Giant Slayer,2013,United States of America,195000000,197687603,Action
+Open Season,2006,United States of America,85000000,197309027,Adventure
+Spy Kids 3-D: Game Over,2003,United States of America,38000000,197011982,Action
+The Other Woman,2014,United States of America,40000000,196781193,Comedy
+50 First Dates,2004,United States of America,75000000,196482882,Comedy
+Panic Room,2002,United States of America,48000000,196397415,Crime
+The Vow,2012,United States of America,30000000,196114570,Drama
+Beowulf,2007,United States of America,70000000,195735876,Adventure
+For Your Eyes Only,1981,United Kingdom,28000000,195312802,Adventure
+The Pelican Brief,1993,United States of America,45000000,195268056,Drama
+The Intern,2015,United States of America,35000000,194564672,Comedy
+The Holiday,2006,United Kingdom,85000000,194168700,Comedy
+Gangs of New York,2002,United States of America,100000000,193772504,Drama
+The Monkey King 2,2016,Hong Kong,68490000,193677158,Action
+Paranormal Activity,2007,United States of America,15000,193355800,Horror
+The Sum of All Fears,2002,United States of America,68000000,193000000,Thriller
+The Curse of the Were-Rabbit,2005,United Kingdom,30000000,192452832,Adventure
+The Equalizer,2014,United States of America,55000000,192330738,Thriller
+The Addams Family,1991,United States of America,30000000,191502426,Horror
+The Living Daylights,1987,United Kingdom,40000000,191185897,Action
+Superman II,1980,United Kingdom,54000000,190458706,Action
+The Longest Yard,2005,United States of America,82000000,190320568,Comedy
+Hollow Man,2000,Germany,95000000,190213455,Action
+Cheaper by the Dozen,2003,United States of America,40000000,190212113,Comedy
+Outbreak,1995,United States of America,50000000,189859560,Action
+The Santa Clause,1994,United States of America,22000000,189833357,Fantasy
+The X Files,1998,Canada,66000000,189198313,Mystery
+Rambo III,1988,United States of America,63000000,189015611,Action
+22 Jump Street,2014,United States of America,50000000,188441614,Crime
+The Secret Life of Walter Mitty,2013,United States of America,90000000,188133322,Adventure
+Tropic Thunder,2008,United States of America,92000000,188072649,Action
+Jaws 2,1978,United States of America,20000000,187884007,Horror
+Octopussy,1983,United Kingdom,27500000,187500000,Adventure
+Ponyo,2008,Japan,41677699,187479518,Animation
+Mr. Popper's Penguins,2011,United States of America,55000000,187361754,Comedy
+12 Years a Slave,2013,United States of America,20000000,187000000,Drama
+The Horse Whisperer,1998,United States of America,60000000,186883563,Drama
+Walk the Line,2005,Germany,28000000,186438883,Drama
+The Final Destination,2009,United States of America,40000000,186167139,Horror
+Atlantis: The Lost Empire,2001,United States of America,120000000,186053725,Animation
+The Waterboy,1998,United States of America,23000000,185991646,Comedy
+Hugo,2011,France,170000000,185770160,Adventure
+The Spy Who Loved Me,1977,United Kingdom,14000000,185438673,Adventure
+Watchmen,2009,United States of America,130000000,185258983,Action
+Snow White and the Seven Dwarfs,1937,United States of America,1488423,184925486,Fantasy
+Inside Man,2006,United States of America,45000000,184376254,Crime
+Jupiter Ascending,2015,United States of America,176000003,183987723,Science Fiction
+Hop,2011,United Kingdom,63000000,183953723,Animation
+Bad Moms,2016,United States of America,20000000,183936074,Comedy
+102 Dalmatians,2000,United States of America,85000000,183611771,Comedy
+The Grudge,2004,Japan,10000000,183474602,Horror
+The BFG,2016,India,140000000,183345589,Adventure
+Aliens,1986,United Kingdom,18500000,183316455,Horror
+Paul Blart: Mall Cop,2009,United States of America,26000000,183293131,Action
+Mirror Mirror,2012,United States of America,85000000,183018522,Adventure
+Cape Fear,1991,United States of America,35000000,182300000,Crime
+The Haunted Mansion,2003,United States of America,90000000,182290266,Thriller
+The Bridges of Madison County,1995,United States of America,24000000,182016617,Drama
+Grease,1978,United States of America,6000000,181813770,Romance
+Poseidon,2006,United States of America,160000000,181674817,Adventure
+Road to Perdition,2002,United States of America,80000000,181001478,Thriller
+Liar Liar,1997,United States of America,45000000,181000000,Comedy
+Kill Bill: Vol. 1,2003,United States of America,30000000,180949000,Action
+Sweet Home Alabama,2002,United States of America,30000000,180622424,Comedy
+The Impossible,2012,United States of America,42000000,180274123,Thriller
+The Dictator,2012,United States of America,65000000,179379533,Comedy
+The League of Extraordinary Gentlemen,2003,Czech Republic,78000000,179265204,Fantasy
+Allegiant,2016,United States of America,110000000,179246868,Adventure
+Moulin Rouge!,2001,Australia,52500000,179213434,Drama
+Scary Movie 4,2006,United States of America,45000000,178262620,Comedy
+Dante's Peak,1997,United States of America,116000000,178127760,Action
+Eagle Eye,2008,United States of America,80000000,178066569,Mystery
+Patriot Games,1992,United States of America,45000000,178051587,Drama
+Brokeback Mountain,2005,Canada,14000000,178043761,Drama
+Flubber,1997,United States of America,80000000,177977226,Comedy
+Double Jeopardy,1999,Canada,70000000,177841558,Crime
+War Horse,2011,United States of America,66000000,177584879,Drama
+Paranormal Activity 2,2010,United States of America,3000000,177512032,Horror
+Hero,2002,China,31000000,177394432,Drama
+How to Lose a Guy in 10 Days,2003,Germany,50000000,177371441,Comedy
+He's Just Not That Into You,2009,Netherlands,40000000,177259441,Comedy
+The Descendants,2011,United States of America,20000000,177243185,Comedy
+Tootsie,1982,United States of America,21000000,177200000,Comedy
+Analyze This,1999,Australia,80000000,176885658,Comedy
+Dr. Dolittle 2,2001,United States of America,70000000,176104344,Comedy
+The Italian Job,2003,United Kingdom,60000000,176070171,Action
+The Bucket List,2007,United States of America,45000000,175372502,Drama
+The Grand Budapest Hotel,2014,United Kingdom,30000000,174600318,Comedy
+Percy Jackson: Sea of Monsters,2013,United States of America,90000000,174578751,Adventure
+Identity Thief,2013,United States of America,35000000,173965010,Comedy
+Big Momma's House,2000,Germany,30000000,173959438,Crime
+In Time,2011,United States of America,40000000,173930596,Action
+Amélie,2001,France,10000000,173921954,Comedy
+Anchorman 2: The Legend Continues,2013,United States of America,50000000,173649015,Comedy
+Creed,2015,United States of America,37000000,173567581,Drama
+Elf,2003,United States of America,32000000,173398518,Comedy
+Scream,1996,United States of America,14000000,173046663,Crime
+Cold Mountain,2003,United States of America,79000000,173013509,Drama
+Evan Almighty,2007,United States of America,175000000,173000000,Fantasy
+Black Hawk Down,2001,United Kingdom,92000000,172989651,Action
+The Santa Clause 2,2002,United States of America,65000000,172855065,Fantasy
+Scream 2,1997,United States of America,24000000,172363301,Horror
+Along Came Polly,2004,United States of America,42000000,171963386,Comedy
+Couples Retreat,2009,United States of America,70000000,171844840,Comedy
+Antz,1998,United States of America,60000000,171757863,Adventure
+No Country for Old Men,2007,United States of America,25000000,171600000,Crime
+Mr. Deeds,2002,United States of America,50000000,171269535,Comedy
+AVP: Alien vs. Predator,2004,Canada,70000000,171183863,Adventure
+Contact,1997,United States of America,90000000,171120329,Drama
+Blood Diamond,2006,Germany,100000000,170877916,Drama
+Cloverfield,2008,United States of America,25000000,170764026,Action
+The Other Guys,2010,United States of America,100000000,170432927,Action
+The Specialist,1994,Peru,45000000,170362582,Action
+Starsky & Hutch,2004,United States of America,60000000,170268750,Comedy
+Shall We Dance?,2004,United States of America,50000000,170128460,Drama
+What Happens in Vegas,2008,United States of America,35000000,170000000,Comedy
+Stuart Little 2,2002,United States of America,120000000,169956806,Family
+Zookeeper,2011,United States of America,80000000,169852759,Comedy
+Dumb and Dumber To,2014,United States of America,40000000,169837010,Comedy
+The Emperor's New Groove,2000,United States of America,100000000,169327687,Adventure
+Seven Pounds,2008,United States of America,55000000,168167691,Drama
+Fantastic Four,2015,United States of America,120000000,167977596,Action
+Unstoppable,2010,United States of America,100000000,167805466,Action
+DodgeBall: A True Underdog Story,2004,Germany,20000000,167722310,Comedy
+Alexander,2004,France,155000000,167298192,War
+Magic Mike,2012,United States of America,7000000,167221571,Drama
+Sleepers,1996,United States of America,44000000,165615285,Crime
+Bridge of Spies,2015,India,40000000,165478348,Thriller
+The Princess Diaries,2001,United States of America,37000000,165335153,Comedy
+The Scorpion King,2002,United States of America,60000000,165333180,Action
+The Muppets,2011,United States of America,45000000,165184237,Comedy
+The Huntsman: Winter's War,2016,United States of America,115000000,164602163,Action
+Speed 2: Cruise Control,1997,United States of America,160000000,164508066,Action
+Daddy Day Care,2003,United States of America,60000000,164433867,Comedy
+Six Days Seven Nights,1998,United States of America,70000000,164000000,Action
+Saw III,2006,United States of America,10000000,163876815,Horror
+Four Christmases,2008,United States of America,80000000,163733697,Comedy
+Burn After Reading,2008,United States of America,37000000,163720069,Comedy
+The Incredible Hulk,2008,United States of America,150000000,163712074,Science Fiction
+Up in the Air,2009,United States of America,25000000,163670000,Drama
+Unbroken,2014,United States of America,65000000,163442937,Drama
+The Happening,2008,United States of America,60000000,163403799,Thriller
+Talladega Nights: The Ballad of Ricky Bobby,2006,United States of America,72500000,162966177,Comedy
+The Island,2005,United States of America,126000000,162949164,Action
+World Trade Center,2006,United States of America,63000000,162945894,Drama
+The Interpreter,2005,France,80000000,162944923,Crime
+The Spiderwick Chronicles,2008,United States of America,90000000,162839667,Adventure
+Memoirs of a Geisha,2005,United States of America,85000000,162242962,Drama
+Eyes Wide Shut,1999,United Kingdom,65000000,162091208,Mystery
+Alien: Resurrection,1997,United States of America,70000000,162000000,Science Fiction
+Scream 3,2000,United States of America,40000000,161834276,Horror
+Live and Let Die,1973,United Kingdom,7000000,161777836,Adventure
+Flight,2012,United States of America,31000000,161772375,Drama
+Payback,1999,United States of America,90000000,161626121,Drama
+The Ring Two,2005,United States of America,50000000,161451538,Drama
+Olympus Has Fallen,2013,United States of America,70000000,161025640,Action
+Born on the Fourth of July,1989,United States of America,14000000,161001698,Drama
+Legends of the Fall,1994,United States of America,30000000,160638883,Adventure
+Into the Storm,2014,United States of America,50000000,160602194,Action
+Johnny English,2003,France,40000000,160583018,Adventure
+Hellboy II: The Golden Army,2008,Germany,85000000,160388063,Adventure
+27 Dresses,2008,United States of America,30000000,160259319,Comedy
+Underworld: Awakening,2012,United States of America,70000000,160112671,Fantasy
+Johnny English Reborn,2011,United Kingdom,45000000,160078586,Crime
+Never Say Never Again,1983,Germany,36000000,160000000,Adventure
+Alien³,1992,United Kingdom,50000000,159773545,Science Fiction
+The Sting,1973,United States of America,5500000,159616327,Comedy
+Princess Mononoke,1997,Japan,26500000,159375308,Adventure
+The Jackal,1997,United States of America,60000000,159330280,Action
+Step Up 3D,2010,United States of America,30000000,159291809,Drama
+Daylight,1996,United States of America,80000000,159212469,Action
+Unforgiven,1992,United States of America,14000000,159157447,Western
+Sin City,2005,United States of America,40000000,158733820,Action
+The Heat,2013,United States of America,43000000,158674180,Action
+The Fast and the Furious: Tokyo Drift,2006,Japan,85000000,158468292,Action
+Goosebumps,2015,Australia,58000000,158162788,Adventure
+Days of Thunder,1990,United States of America,60000000,157920733,Adventure
+Final Destination 5,2011,United States of America,47000000,157887643,Horror
+Crimson Tide,1995,United States of America,53000000,157387195,Action
+The Book of Eli,2010,United States of America,80000000,157107755,Action
+This Means War,2012,United States of America,65000000,156974557,Action
+Ip Man 3,2015,Hong Kong,36000000,156844753,Action
+P.S. I Love You,2007,United States of America,30000000,156835339,Drama
+Mystic River,2003,United States of America,25000000,156822020,Thriller
+Lara Croft Tomb Raider: The Cradle of Life,2003,United States of America,95000000,156505388,Action
+Licence to Kill,1989,United Kingdom,32000000,156167015,Adventure
+The Hateful Eight,2015,United States of America,44000000,155760117,Crime
+Rocky Balboa,2006,United States of America,24000000,155721132,Drama
+Hannah Montana: The Movie,2009,United States of America,35000000,155545279,Comedy
+What Lies Beneath,2000,United States of America,100000000,155464351,Drama
+Knowing,2009,United Kingdom,50000000,155446362,Action
+Blade II,2002,Germany,54000000,155010032,Fantasy
+The Monuments Men,2014,Germany,70000000,154984035,War
+Dreamgirls,2006,United States of America,70000000,154937680,Drama
+Maid in Manhattan,2002,United States of America,55000000,154906693,Comedy
+Cool Runnings,1993,United States of America,14000000,154864401,Comedy
+Monster-in-Law,2005,United States of America,43000000,154749918,Romance
+The Phantom of the Opera,2004,United Kingdom,70000000,154648887,Thriller
+The Town,2010,United States of America,37000000,154026136,Crime
+Ride Along,2014,United States of America,25000000,153997819,Action
+Focus,2015,United States of America,50100000,153962963,Romance
+Gremlins,1984,United States of America,11000000,153083102,Fantasy
+The Devil's Advocate,1997,Germany,57000000,152944660,Drama
+Tower Heist,2011,United States of America,75000000,152930623,Action
+Saw II,2005,United States of America,4000000,152925093,Horror
+Chocolat,2000,United Kingdom,25000000,152500343,Comedy
+A View to a Kill,1985,France,30000000,152427960,Adventure
+A Time to Kill,1996,United States of America,40000000,152266007,Crime
+Date Night,2010,United States of America,55000000,152263880,Comedy
+Kill Bill: Vol. 2,2004,United States of America,30000000,152159461,Action
+Phenomenon,1996,United States of America,32000000,152036382,Drama
+Congo,1995,United States of America,50000000,152022101,Action
+Bad Grandpa,2013,United States of America,15000000,151831537,Comedy
+Big,1988,United States of America,18000000,151668774,Fantasy
+The Bone Collector,1999,United States of America,73000000,151493655,Drama
+Vantage Point,2008,United States of America,40000000,151161491,Drama
+Midnight in Paris,2011,Spain,30000000,151119219,Fantasy
+47 Ronin,2013,United States of America,175000000,150962475,Drama
+Step Up 2: The Streets,2008,United States of America,23000000,150816700,Music
+Gods of Egypt,2016,Australia,140000000,150680864,Fantasy
+Friends with Benefits,2011,United States of America,35000000,150483765,Romance
+Happy Feet Two,2011,Australia,130000000,150406466,Animation
+Broken Arrow,1996,United States of America,50000000,150270147,Action
+The Taking of Pelham 1 2 3,2009,United States of America,100000000,150166126,Thriller
+Star Trek: First Contact,1996,United States of America,46000000,150000000,Science Fiction
+The General's Daughter,1999,Germany,60000000,149705852,Crime
+Jack and Jill,2011,United States of America,79000000,149673788,Comedy
+Lone Survivor,2013,United States of America,40000000,149295601,Action
+Beverly Hills Chihuahua,2008,United States of America,20000000,149281606,Adventure
+"Me, Myself & Irene",2000,United States of America,51000000,149270999,Comedy
+Ghost Rider: Spirit of Vengeance,2011,United Arab Emirates,57000000,149217355,Action
+Surf's Up,2007,United States of America,85000000,149044513,Animation
+Death Becomes Her,1992,United States of America,55000000,149022650,Fantasy
+Resident Evil: Extinction,2007,Australia,45000000,148412065,Horror
+Seabiscuit,2003,United States of America,87000000,148336445,Drama
+Spy Kids,2001,United States of America,35000000,147934180,Action
+The Game Plan,2007,United States of America,22000000,147880543,Comedy
+The Mexican,2001,Mexico,57000000,147845033,Action
+No Strings Attached,2011,United States of America,25000000,147780440,Comedy
+Source Code,2011,Canada,32000000,147332697,Thriller
+Romeo + Juliet,1996,United States of America,14500000,147298761,Drama
+Swordfish,2001,Australia,102000000,147080413,Action
+The Last Witch Hunter,2015,United States of America,90000000,146936910,Fantasy
+Mama,2013,Spain,15000000,146497771,Horror
+The Color Purple,1985,United States of America,15000000,146292009,Drama
+Police Academy,1984,United States of America,4500000,146198896,Comedy
+Music and Lyrics,2007,United States of America,40000000,145896422,Comedy
+Driving Miss Daisy,1989,United States of America,7500000,145793296,Comedy
+Lilo & Stitch,2002,United States of America,80000000,145771527,Animation
+Chronicle,2012,United States of America,15000000,145000000,Science Fiction
+I Am Number Four,2011,United States of America,50000000,144492830,Action
+The Exorcism of Emily Rose,2005,United States of America,19000000,144216468,Crime
+The Beach,2000,United Kingdom,40000000,144056873,Drama
+Charlotte's Web,2006,Germany,85000000,144000000,Comedy
+Pete's Dragon,2016,United States of America,65000000,143695338,Adventure
+Spy Game,2001,United Kingdom,92000000,143049560,Action
+Meet Joe Black,1998,United States of America,90000000,142940100,Fantasy
+"Crazy, Stupid, Love.",2011,United States of America,50000000,142851197,Comedy
+Paranormal Activity 4,2012,United States of America,5000000,142817992,Horror
+The Legend of Zorro,2005,Mexico,75000000,142400065,Action
+New Year's Eve,2011,United States of America,56000000,142044638,Comedy
+Legally Blonde,2001,United States of America,18000000,141774679,Comedy
+Gothika,2003,United States of America,40000000,141591324,Horror
+Bad Boys,1995,United States of America,19000000,141407024,Action
+Scary Movie 2,2001,Canada,45000000,141220678,Comedy
+Thunderball,1965,Bahamas,5500000,141195658,Adventure
+Shallow Hal,2001,United States of America,40000000,141069860,Comedy
+Evita,1996,United States of America,55000000,141047179,History
+Animal House,1978,United States of America,2700000,141000000,Comedy
+The Devil's Own,1997,United States of America,90000000,140807547,Crime
+Trainwreck,2015,United States of America,35000000,140795793,Comedy
+Die Hard,1988,United States of America,28000000,140767956,Action
+Sausage Party,2016,Canada,19000000,140752617,Adventure
+Step Up Revolution,2012,United States of America,33000000,140470746,Music
+Deep Impact,1998,United States of America,75000000,140464664,Action
+Monster House,2006,United States of America,75000000,140175006,Animation
+The SpongeBob SquarePants Movie,2004,United States of America,30000000,140161792,Animation
+Legend of the Guardians: The Owls of Ga'Hoole,2010,Australia,80000000,140073390,Animation
+American Graffiti,1973,United States of America,777000,140000000,Comedy
+Anastasia,1997,United States of America,53000000,139804348,Animation
+Saw IV,2007,United States of America,10000000,139352633,Horror
+Star Trek: The Motion Picture,1979,United States of America,35000000,139000000,Science Fiction
+Platoon,1986,United Kingdom,6000000,138530565,Drama
+Big Momma's House 2,2006,United States of America,40000000,138259062,Comedy
+Bridge to Terabithia,2007,United States of America,60000000,137587063,Adventure
+Contagion,2011,United States of America,60000000,137551594,Drama
+Last Action Hero,1993,United States of America,85000000,137298489,Adventure
+Conspiracy Theory,1997,United States of America,75000000,136982834,Action
+Anaconda,1997,Brazil,45000000,136885767,Adventure
+The Best Exotic Marigold Hotel,2011,United Arab Emirates,10000000,136836156,Drama
+The Godfather: Part III,1990,Italy,54000000,136766062,Crime
+Remember the Titans,2000,United States of America,30000000,136706683,Drama
+Let's Be Cops,2014,United States of America,17000000,136621271,Comedy
+17 Again,2009,United States of America,20000000,136267476,Comedy
+Lost in Space,1998,United States of America,80000000,136159423,Adventure
+Saw: The Final Chapter,2010,Canada,20000000,136150434,Horror
+The Bounty Hunter,2010,United States of America,40000000,136000000,Action
+The Jungle Book 2,2003,Australia,20000000,135680000,Family
+Stardust,2007,Iceland,70000000,135560026,Adventure
+Babel,2006,France,25000000,135330182,Drama
+Sense and Sensibility,1995,United Kingdom,16500000,135000000,Drama
+Wall Street: Money Never Sleeps,2010,United States of America,70000000,134748021,Drama
+Last Vegas,2013,United States of America,28000000,134402450,Comedy
