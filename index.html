@@ -1,314 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adatvizualizációs Dashboard</title>
+    <title>Hollywood Moneyball - Filmipari BI Projekt</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* MOZI STÍLUSÚ CSS (Dark Mode) */
+        :root {
+            --bg-color: #141414; /* Netflix fekete */
+            --card-bg: #1f1f1f;
+            --text-main: #e5e5e5;
+            --text-muted: #a3a3a3;
+            --accent: #e50914; /* Netflix piros */
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #675193 0%, #ca8861 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         header {
+            background: linear-gradient(to bottom, #000000, var(--bg-color));
+            padding: 40px 20px;
             text-align: center;
-            color: white;
-            margin-bottom: 40px;
-            padding: 20px;
+            border-bottom: 2px solid var(--accent);
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            color: var(--text-muted);
+            font-size: 1.2em;
+            margin-top: 10px;
         }
 
-        .charts-grid {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Grid elrendezés a vizualizációknak */
+        .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
-            margin-bottom: 40px;
+        }
+
+        @media (min-width: 900px) {
+            .dashboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .full-width {
+                grid-column: span 2;
+            }
         }
 
         .chart-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(103, 81, 147, 0.25);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            border: 1px solid rgba(103, 81, 147, 0.1);
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
         }
 
         .chart-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(103, 81, 147, 0.4);
-            border-color: rgba(202, 136, 97, 0.3);
+            transform: translateY(-5px);
+            border: 1px solid #333;
         }
 
-        .chart-title {
-            font-size: 1.5rem;
-            color: #675193;
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 10px;
+            margin-top: 0;
+        }
+
+        p.desc {
+            font-size: 0.9em;
+            color: var(--text-muted);
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #675193;
-            font-weight: 600;
-        }
-
-        .chart-container {
-            position: relative;
-            height: 300px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .chart-container canvas,
-        .chart-container svg {
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .chart-wrapper {
-            background: linear-gradient(to bottom, rgba(103, 81, 147, 0.03), rgba(202, 136, 97, 0.03));
-            border-radius: 10px;
-            padding: 15px;
-            transition: background 0.3s ease;
-            border: 1px solid rgba(103, 81, 147, 0.1);
-        }
-
-        .chart-card:hover .chart-wrapper {
-            background: linear-gradient(to bottom, rgba(103, 81, 147, 0.06), rgba(202, 136, 97, 0.06));
-            border-color: rgba(103, 81, 147, 0.2);
         }
 
         footer {
             text-align: center;
-            color: white;
-            padding: 20px;
-            margin-top: 40px;
-            opacity: 0.95;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .charts-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .chart-card {
-                padding: 20px;
-            }
-
-            .chart-container {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .subtitle {
-                font-size: 0.9rem;
-            }
-
-            .chart-container {
-                height: 200px;
-            }
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.8em;
+            border-top: 1px solid #333;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
+
+    <header>
+        <h1>Hollywood Moneyball</h1>
+        <div class="subtitle">Adatvezérelt betekintés a filmipar megtérülésébe</div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Adatvizualizációs Dashboard</h1>
-            <p class="subtitle">US Population Distribution - 2000</p>
-        </header>
-
-        <div class="charts-grid">
-            <!-- Chart 1: Bar Chart -->
-            <div class="chart-card">
-                <h2 class="chart-title">Population by Age and Gender</h2>
-                <div class="chart-wrapper">
-                    <div class="chart-container" id="chart1"></div>
-                </div>
-            </div>
-
-            <!-- Chart 2: Normalized Bar Chart -->
-            <div class="chart-card">
-                <h2 class="chart-title">Population Distribution (Normalized)</h2>
-                <div class="chart-wrapper">
-                    <div class="chart-container" id="chart2"></div>
-                </div>
-            </div>
-
-            <!-- Chart 3: Population Pyramid -->
-            <div class="chart-card">
-                <h2 class="chart-title">Population Pyramid</h2>
-                <div class="chart-wrapper">
-                    <div class="chart-container" id="chart3"></div>
-                </div>
-            </div>
+        <div style="margin-bottom: 40px;">
+            <h3>Miért fontos ez?</h3>
+            <p>Ez a dashboard a filmes befektetések megtérülését (ROI) vizsgálja. A cél azonosítani azokat a műfajokat és költségvetési kategóriákat, amelyek a legmagasabb profitot hozzák a stúdióknak.</p>
         </div>
 
-        <footer>
-            <p>&copy; 2024 Data Visualization Dashboard</p>
-        </footer>
+        <div class="dashboard-grid">
+            
+            <div class="chart-card full-width">
+                <h2>Globális Bevételek</h2>
+                <p class="desc">Mely országok gyártják a legtöbb bevételt termelő filmeket? (Húzd az egeret az országokra!)</p>
+                <div id="vis-map"></div>
+            </div>
+
+            <div class="chart-card">
+                <h2>A Blockbuster Recept</h2>
+                <p class="desc">Költségvetés (Budget) vs. Bevétel (Revenue). A vonal feletti pontok a nyereséges filmek.</p>
+                <div id="vis-scatter"></div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Műfaji Trendek</h2>
+                <p class="desc">Hogyan változott az átlagos profit az évek során műfajonként?</p>
+                <div id="vis-trend"></div>
+            </div>
+
+        </div>
     </div>
 
+    <footer>
+        <p>Készítette: Csilip Loránd | Adatforrás: TMDB 5000 Movies Dataset | Business Intelligencia Projekt 2026</p>
+    </footer>
+
     <script>
-        // Chart 1: Bar Chart
-        const spec1 = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-          "description": "A bar chart showing the US population distribution of age groups and gender in 2000.",
-          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
-          "transform": [
-            {"filter": "datum.year == 2000"},
-            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
-          ],
-          "width": "container",
-          "height": 250,
-          "autosize": {"type": "fit", "contains": "padding"},
-          "params": [
-            {"name": "grid", "select": {"type": "interval", "bind": "scales"}},
-            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
-          ],
-          "mark": "bar",
-          "encoding": {
-            "x": {"field": "age", "type": "ordinal", "axis": {"labelAngle": -45}},
-            "y": {
-              "aggregate": "sum", "field": "people",
-              "title": "population",
-              "stack": null
-            },
-            "color": {
-              "field": "gender",
-              "scale": {"range": ["#675193", "#ca8861"]}
-            },
-            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
-            "tooltip": [
-              {"field": "age", "type": "ordinal", "title": "Age"},
-              {"field": "gender", "type": "nominal", "title": "Gender"},
-              {"aggregate": "sum", "field": "people", "title": "Population"}
-            ]
-          }
+        // --- ADATKONFIGURÁCIÓ ---
+        // Ha kész vagy az Excel csv-vel, írd át ezt "url": "movies.csv"-re!
+        const dataSource = {
+            "url": "movies.csv"
         };
 
-        // Chart 2: Normalized Bar Chart
-        const spec2 = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
-          "transform": [
-            {"filter": "datum.year == 2000"},
-            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
-          ],
-          "width": "container",
-          "height": 250,
-          "autosize": {"type": "fit", "contains": "padding"},
-          "params": [
-            {"name": "grid", "select": {"type": "interval", "bind": "scales"}},
-            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
-          ],
-          "mark": "bar",
-          "encoding": {
-            "y": {
-              "aggregate": "sum", "field": "people",
-              "title": "population",
-              "stack":  "normalize"
+        // --- 1. TÉRKÉP SPECIFIKÁCIÓ ---
+        const specMap = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",
+            "height": 300,
+            "background": "transparent",
+            "data": {
+                "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json",
+                "format": {"type": "topojson", "feature": "countries1"}
             },
-            "x": {"field": "age", "axis": {"labelAngle": -45}},
-            "color": {
-              "field": "gender",
-              "scale": {"range": ["#675193", "#ca8861"]}
+            "transform": [
+                {
+                    "lookup": "properties.name",
+                    "from": {
+                        "data": dataSource, // Itt használjuk a te adataidat
+                        "key": "Country",
+                        "fields": ["Revenue"]
+                    }
+                }
+            ],
+            "mark": {"type": "geoshape", "stroke": "#333"},
+            "encoding": {
+                "color": {
+                    "field": "Revenue",
+                    "type": "quantitative",
+                    "scale": {"scheme": "reds"},
+                    "title": "Bevétel ($)"
+                },
+                "tooltip": [
+                    {"field": "properties.name", "type": "nominal", "title": "Ország"},
+                    {"field": "Revenue", "type": "quantitative", "format": "$,.0f", "title": "Összbevétel"}
+                ]
             },
-            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
-            "tooltip": [
-              {"field": "age", "type": "ordinal", "title": "Age"},
-              {"field": "gender", "type": "nominal", "title": "Gender"},
-              {"aggregate": "sum", "field": "people", "title": "Population (%)"}
-            ]
-          }
+            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
         };
 
-        // Chart 3: Population Pyramid
-        const spec3 = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-          "description": "A population pyramid for the US in 2000, created using stack. See https://vega.github.io/vega-lite/examples/concat_population_pyramid.html for a variant of this created using concat.",
-          "data": { "url": "https://vega.github.io/vega-lite/examples/data/population.json"},
-          "transform": [
-            {"filter": "datum.year == 2000"},
-            {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"},
-            {"calculate": "datum.sex == 2 ? -datum.people : datum.people", "as": "signed_people"}
-          ],
-          "width": "container",
-          "height": 250,
-          "autosize": {"type": "fit", "contains": "padding"},
-          "params": [
-            {"name": "grid", "select": {"type": "interval", "encodings": ["x"], "bind": "scales"}},
-            {"name": "highlight", "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}}
-          ],
-          "mark": "bar",
-          "encoding": {
-            "y": {
-              "field": "age",
-              "axis": null, "sort": "descending"
+        // --- 2. SCATTER PLOT SPECIFIKÁCIÓ ---
+        const specScatter = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",
+            "height": 300,
+            "background": "transparent",
+            "data": dataSource,
+            "mark": "circle",
+            "encoding": {
+                "x": {"field": "Budget", "type": "quantitative", "title": "Költségvetés ($)", "axis": {"gridColor": "#333"}},
+                "y": {"field": "Revenue", "type": "quantitative", "title": "Bevétel ($)", "axis": {"gridColor": "#333"}},
+                "color": {"field": "Genre", "type": "nominal", "title": "Műfaj"},
+                "size": {"value": 100},
+                "tooltip": [
+                    {"field": "Title", "title": "Cím"},
+                    {"field": "Budget", "format": "$,.0f"},
+                    {"field": "Revenue", "format": "$,.0f"},
+                    {"field": "Genre"}
+                ]
             },
-            "x": {
-              "aggregate": "sum", "field": "signed_people",
-              "title": "population",
-              "axis": {"format": "s"}
-            },
-            "color": {
-              "field": "gender",
-              "scale": {"range": ["#675193", "#ca8861"]},
-              "legend": {"orient": "top", "title": null}
-            },
-            "opacity": {"condition": {"param": "highlight", "empty": false, "value": 1}, "value": 0.5},
-            "tooltip": [
-              {"field": "age", "type": "ordinal", "title": "Age"},
-              {"field": "gender", "type": "nominal", "title": "Gender"},
-              {"aggregate": "sum", "field": "signed_people", "title": "Population"}
-            ]
-          },
-          "config": {
-            "view": {"stroke": null},
-            "axis": {"grid": false}
-          }
+            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
         };
 
-        // Embed charts with responsive sizing
-        vegaEmbed('#chart1', spec1, {actions: false, mode: 'vega-lite'});
-        vegaEmbed('#chart2', spec2, {actions: false, mode: 'vega-lite'});
-        vegaEmbed('#chart3', spec3, {actions: false, mode: 'vega-lite'});
+        // --- 3. TREND LINE SPECIFIKÁCIÓ ---
+        const specTrend = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",
+            "height": 300,
+            "background": "transparent",
+            "data": dataSource,
+            "mark": {"type": "line", "point": true},
+            "encoding": {
+                "x": {"field": "Year", "type": "ordinal", "title": "Év", "axis": {"gridColor": "#333"}},
+                "y": {"field": "Revenue", "type": "quantitative", "aggregate": "mean", "title": "Átlagbevétel ($)", "axis": {"gridColor": "#333"}},
+                "color": {"field": "Genre", "type": "nominal"},
+                "tooltip": [
+                    {"field": "Genre"},
+                    {"field": "Year"},
+                    {"field": "Revenue", "aggregate": "mean", "format": "$,.0f", "title": "Átlag"}
+                ]
+            },
+            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
+        };
+
+        // Vizualizációk renderelése
+        vegaEmbed('#vis-map', specMap);
+        vegaEmbed('#vis-scatter', specScatter);
+        vegaEmbed('#vis-trend', specTrend);
     </script>
 </body>
 </html>
