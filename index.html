@@ -3,244 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hollywood Moneyball - Filmipari BI Projekt</title>
+    <title>Szabadúszó Piaci Elemzés | Dashboard</title>
     
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    
     <style>
-        /* MOZI STÍLUSÚ CSS (Dark Mode) */
         :root {
-            --bg-color: #141414; /* Netflix fekete */
-            --card-bg: #1f1f1f;
-            --text-main: #e5e5e5;
-            --text-muted: #a3a3a3;
-            --accent: #e50914; /* Netflix piros */
+            --bg-color: #0f172a;       /* Sötétkék háttér */
+            --card-bg: #1e293b;        /* Kártya háttér */
+            --text-primary: #f8fafc;   /* Fehér szöveg */
+            --text-secondary: #94a3b8; /* Szürke szöveg */
+            --accent: #38bdf8;         /* Kék kiemelés */
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Roboto', sans-serif;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
+        /* --- Fejléc --- */
         header {
-            background: linear-gradient(to bottom, #000000, var(--bg-color));
-            padding: 40px 20px;
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 1rem;
             text-align: center;
-            border-bottom: 2px solid var(--accent);
+            margin-bottom: 2rem;
+            animation: slideDown 0.8s ease-out;
         }
 
         h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3em;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
         }
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.2em;
-            margin-top: 10px;
+        p.subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-top: 0.8rem;
+            font-weight: 300;
         }
 
+        /* --- Konténer és Rács --- */
         .container {
-            max-width: 1200px;
+            max-width: 1000px; /* Szűkebb konténer, hogy fókuszáltabb legyen */
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 1.5rem;
         }
 
-        /* Grid elrendezés a vizualizációknak */
         .dashboard-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem; /* Nagyobb tér a diagramok között */
+            padding-bottom: 5rem;
         }
 
-        @media (min-width: 900px) {
-            .dashboard-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .full-width {
-                grid-column: span 2;
-            }
+        /* --- Kártya Stílus --- */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        .chart-card {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-            transition: transform 0.2s;
-        }
-
-        .chart-card:hover {
+        .card:hover {
             transform: translateY(-5px);
-            border: 1px solid #333;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            border-color: rgba(56, 189, 248, 0.3);
         }
 
-        h2 {
-            font-family: 'Montserrat', sans-serif;
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 6px;
+            height: 28px;
+            background: var(--accent-gradient);
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* --- Diagram és Magyarázat --- */
+        .viz-container {
+            width: 100%;
+            min-height: 400px;
+        }
+
+        .chart-description {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .chart-description strong {
             color: var(--accent);
-            border-left: 4px solid var(--accent);
-            padding-left: 10px;
-            margin-top: 0;
+            font-weight: 600;
+            font-style: normal;
         }
 
-        p.desc {
-            font-size: 0.9em;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        /* --- Animációk --- */
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
+        /* Késleltetések a "beúszáshoz" */
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+        .card:nth-child(7) { animation-delay: 0.7s; }
+
+        /* --- Lábléc --- */
         footer {
             text-align: center;
-            padding: 40px;
-            color: var(--text-muted);
-            font-size: 0.8em;
-            border-top: 1px solid #333;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Hollywood Moneyball</h1>
-        <div class="subtitle">Adatvezérelt betekintés a filmipar megtérülésébe</div>
-    </header>
+<header>
+    <h1>Szabadúszó <span style="color:var(--accent)">Piaci Elemzés</span></h1>
+    <p class="subtitle">Globális trendek, fizetések és technológiai készségek áttekintése</p>
+</header>
 
-    <div class="container">
-        <div style="margin-bottom: 40px;">
-            <h3>Miért fontos ez?</h3>
-            <p>Ez a dashboard a filmes befektetések megtérülését (ROI) vizsgálja. A cél azonosítani azokat a műfajokat és költségvetési kategóriákat, amelyek a legmagasabb profitot hozzák a stúdióknak.</p>
+<div class="container">
+    <div class="dashboard-grid">
+        
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Globális Jövedelemeloszlás</div>
+            </div>
+            <div id="viz1" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> Ez a térkép az átlagos éves bevételeket mutatja országonként. 
+                A sötétebb kék területek (pl. USA, Svájc, Ausztrália) jelzik a legmagasabb átlagfizetéseket, 
+                míg a világosabbak az alacsonyabb bérszínvonalú régiókat. Az adatokra kattintva szűrhető a többi diagram.
+            </p>
         </div>
 
-        <div class="dashboard-grid">
-            
-            <div class="chart-card full-width">
-                <h2>Globális Bevételek</h2>
-                <p class="desc">Mely országok gyártják a legtöbb bevételt termelő filmeket? (Húzd az egeret az országokra!)</p>
-                <div id="vis-map"></div>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Top 15 Legjobban Fizető Készség</div>
             </div>
-
-            <div class="chart-card">
-                <h2>A Blockbuster Recept</h2>
-                <p class="desc">Költségvetés (Budget) vs. Bevétel (Revenue). A vonal feletti pontok a nyereséges filmek.</p>
-                <div id="vis-scatter"></div>
-            </div>
-
-            <div class="chart-card">
-                <h2>Műfaji Trendek</h2>
-                <p class="desc">Hogyan változott az átlagos profit az évek során műfajonként?</p>
-                <div id="vis-trend"></div>
-            </div>
-
+            <div id="viz7" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> A technológiai tudás árazása. 
+                A lista élén a <strong>kiberbiztonsági</strong> (Network Security, Cryptography) és 
+                <strong>Blockchain</strong> fejlesztési készségek állnak, melyekért a piac jelenleg kiemelkedő óradíjat fizet.
+            </p>
         </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Átlagos Óradíj Kategóriánként</div>
+            </div>
+            <div id="viz3" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> A fő szakterületek összehasonlítása. 
+                Látható, hogy az olyan specializált területek, mint az <strong>AI/ML Engineering</strong> és a <strong>Blockchain</strong> 
+                magasabb átlagos óradíjjal rendelkeznek, mint a hagyományosabb Webfejlesztés vagy UI/UX design.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Régió és Kategória Hőtérkép</div>
+            </div>
+            <div id="viz6" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> Hol, mi éri a legtöbbet? 
+                Ez a mátrix megmutatja a régiók és szakterületek metszetét. A sárgább/világosabb cellák jelzik a "forró pontokat", 
+                ahol a legmagasabbak a bérek (pl. AI mérnökök Észak-Amerikában).
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Tapasztalat vs. Óradíj</div>
+            </div>
+            <div id="viz4" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> Minden pont egy szabadúszót jelöl. 
+                Jól kirajzolódik a trend: a tapasztalati évek (X tengely) növekedésével az óradíj (Y tengely) is emelkedik, 
+                de a szórás is nő a senior szinteken.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Bevételi Növekedés Trend</div>
+            </div>
+            <div id="viz2" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> Az éves bevétel átlagos alakulása a karrierút során. 
+                A görbe meredeksége megmutatja, mely tapasztalati években (pl. 2-5 év között) várható a legdinamikusabb fizetésemelkedés.
+            </p>
+        </div>
+        
+         <div class="card">
+             <div class="card-header">
+                <div class="card-icon"></div>
+                <div class="card-title">Végzettség Hatása a Bérekre</div>
+            </div>
+            <div id="viz5" class="viz-container"></div>
+            <p class="chart-description">
+                <strong>Mit látunk?</strong> Van-e értelme a diplomának? 
+                A dobozdiagram összehasonlítja a különböző végzettségek (PhD, Master, Bootcamp, Autodidakta) óradíj-eloszlását. 
+                Látható, hogy bár a diploma számít, a Bootcamp és autodidakta fejlesztők is versenyképes sávban mozognak.
+            </p>
+        </div>
+
     </div>
+</div>
 
-    <footer>
-        <p>Készítette: Csilip Loránd | Adatforrás: TMDB 5000 Movies Dataset | Business Intelligence Projekt 2026</p>
-    </footer>
+<footer>
+    Generálva Vega-Lite & Python segítségével | Adatforrás: freelancer_earnings.csv
+</footer>
 
-    <script>
-        // --- ADATKONFIGURÁCIÓ ---
-        // Ha kész vagy az Excel csv-vel, írd át ezt "url": "movies.csv"-re!
-        const dataSource = {
-            "url": "https://raw.githubusercontent.com/lorandcs/lorandcs.github.io/refs/heads/main/movies.csv"
-        };
-
-        // --- 1. TÉRKÉP SPECIFIKÁCIÓ ---
-        const specMap = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "width": "container",
-            "height": 300,
+<script>
+    const embedOpt = {
+        "theme": "dark", 
+        "actions": false, 
+        "renderer": "svg",
+        "config": {
             "background": "transparent",
-            "data": {
-                "url": "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json",
-                "format": {"type": "topojson", "feature": "countries1"}
+            "view": { "stroke": "transparent" },
+            "axis": { 
+                "labelFont": "Inter", 
+                "titleFont": "Inter",
+                "labelColor": "#94a3b8",
+                "titleColor": "#f8fafc"
             },
-            "transform": [
-                {
-                    "lookup": "properties.name",
-                    "from": {
-                        "data": dataSource, // Itt használjuk a te adataidat
-                        "key": "Country",
-                        "fields": ["Revenue"]
-                    }
-                }
-            ],
-            "mark": {"type": "geoshape", "stroke": "#333"},
-            "encoding": {
-                "color": {
-                    "field": "Revenue",
-                    "type": "quantitative",
-                    "scale": {"scheme": "reds"},
-                    "title": "Bevétel ($)"
-                },
-                "tooltip": [
-                    {"field": "properties.name", "type": "nominal", "title": "Ország"},
-                    {"field": "Revenue", "type": "quantitative", "format": "$,.0f", "title": "Összbevétel"}
-                ]
+            "legend": {
+                "labelFont": "Inter",
+                "titleFont": "Inter",
+                "labelColor": "#94a3b8",
+                "titleColor": "#f8fafc"
             },
-            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
-        };
+            "title": {
+                "font": "Inter",
+                "color": "#f8fafc"
+            }
+        }
+    };
 
-        // --- 2. SCATTER PLOT SPECIFIKÁCIÓ ---
-        const specScatter = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "width": "container",
-            "height": 300,
-            "background": "transparent",
-            "data": dataSource,
-            "mark": "circle",
-            "encoding": {
-                "x": {"field": "Budget", "type": "quantitative", "title": "Költségvetés ($)", "axis": {"gridColor": "#333"}},
-                "y": {"field": "Revenue", "type": "quantitative", "title": "Bevétel ($)", "axis": {"gridColor": "#333"}},
-                "color": {"field": "Genre", "type": "nominal", "title": "Műfaj"},
-                "size": {"value": 100},
-                "tooltip": [
-                    {"field": "Title", "title": "Cím"},
-                    {"field": "Budget", "format": "$,.0f"},
-                    {"field": "Revenue", "format": "$,.0f"},
-                    {"field": "Genre"}
-                ]
-            },
-            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
-        };
+    // CSV Konfiguráció: Kifejezetten megmondjuk, mi szám és mi szöveg
+    const csvConfig = {
+        "url": "freelancer_earnings.csv",
+        "format": {
+            "type": "csv",
+            "parse": {
+                "hourly_rate_usd": "number",
+                "annual_income_usd": "number",
+                "years_experience": "number",
+                "country_id": "number"
+            }
+        }
+    };
 
-        // --- 3. TREND LINE SPECIFIKÁCIÓ ---
-        const specTrend = {
-            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "width": "container",
-            "height": 300,
-            "background": "transparent",
-            "data": dataSource,
-            "mark": {"type": "line", "point": true},
-            "encoding": {
-                "x": {"field": "Year", "type": "ordinal", "title": "Év", "axis": {"gridColor": "#333"}},
-                "y": {"field": "Revenue", "type": "quantitative", "aggregate": "mean", "title": "Átlagbevétel ($)", "axis": {"gridColor": "#333"}},
-                "color": {"field": "Genre", "type": "nominal"},
-                "tooltip": [
-                    {"field": "Genre"},
-                    {"field": "Year"},
-                    {"field": "Revenue", "aggregate": "mean", "format": "$,.0f", "title": "Átlag"}
-                ]
-            },
-            "config": {"text": {"color": "#e5e5e5"}, "axis": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}, "legend": {"labelColor": "#a3a3a3", "titleColor": "#e5e5e5"}}
-        };
+    // Térkép adatok (Beágyazva a stabilitás érdekében)
+    const mapValues = [
+        {"country": "Argentina", "avg_income": 62235, "freelancer_count": 22, "id": 32},
+        {"country": "Australia", "avg_income": 124311, "freelancer_count": 20, "id": 36},
+        {"country": "Brazil", "avg_income": 61763, "freelancer_count": 25, "id": 76},
+        {"country": "Canada", "avg_income": 105655, "freelancer_count": 26, "id": 124},
+        {"country": "China", "avg_income": 82069, "freelancer_count": 22, "id": 156},
+        {"country": "Colombia", "avg_income": 59797, "freelancer_count": 22, "id": 170},
+        {"country": "France", "avg_income": 97136, "freelancer_count": 22, "id": 250},
+        {"country": "Germany", "avg_income": 100411, "freelancer_count": 20, "id": 276},
+        {"country": "India", "avg_income": 58385, "freelancer_count": 25, "id": 356},
+        {"country": "Israel", "avg_income": 68709, "freelancer_count": 19, "id": 376},
+        {"country": "Japan", "avg_income": 82622, "freelancer_count": 25, "id": 392},
+        {"country": "Mexico", "avg_income": 62598, "freelancer_count": 22, "id": 484},
+        {"country": "Nigeria", "avg_income": 59570, "freelancer_count": 24, "id": 566},
+        {"country": "Philippines", "avg_income": 56973, "freelancer_count": 22, "id": 608},
+        {"country": "Poland", "avg_income": 69176, "freelancer_count": 21, "id": 616},
+        {"country": "Romania", "avg_income": 71675, "freelancer_count": 21, "id": 642},
+        {"country": "South Africa", "avg_income": 69248, "freelancer_count": 24, "id": 710},
+        {"country": "Switzerland", "avg_income": 128522, "freelancer_count": 25, "id": 756},
+        {"country": "UAE", "avg_income": 108341, "freelancer_count": 22, "id": 784},
+        {"country": "UK", "avg_income": 105862, "freelancer_count": 23, "id": 826},
+        {"country": "US", "avg_income": 121516, "freelancer_count": 25, "id": 840},
+        {"country": "Ukraine", "avg_income": 68733, "freelancer_count": 23, "id": 804}
+    ];
 
-        // Vizualizációk renderelése
-        vegaEmbed('#vis-map', specMap);
-        vegaEmbed('#vis-scatter', specScatter);
-        vegaEmbed('#vis-trend', specTrend);
-    </script>
+    const specs = {
+      "viz1": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 450,
+        "projection": {"type": "mercator"},
+        "data": {
+          "url": "https://vega.github.io/vega-datasets/data/world-110m.json",
+          "format": {"type": "topojson", "feature": "countries"}
+        },
+        "transform": [
+          {
+            "lookup": "id",
+            "from": {
+              "data": {"values": mapValues},
+              "key": "id",
+              "fields": ["avg_income", "country", "freelancer_count"]
+            }
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "#1e293b"},
+        "encoding": {
+          "color": {
+            "field": "avg_income",
+            "type": "quantitative",
+            "title": "Átlagos Éves Bevétel ($)",
+            "scale": {"scheme": "blues"}
+          },
+          "tooltip": [
+            {"field": "country", "type": "nominal", "title": "Ország"},
+            {"field": "avg_income", "type": "quantitative", "title": "Átlag Bevétel", "format": "$,.0f"},
+            {"field": "freelancer_count", "type": "quantitative", "title": "Szabadúszók száma"}
+          ]
+        }
+      },
+
+      "viz2": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 350,
+        "data": csvConfig,
+        "transform": [
+          {"calculate": "round(datum.years_experience)", "as": "exp_bin"}
+        ],
+        "mark": {"type": "line", "point": true, "interpolate": "monotone"},
+        "encoding": {
+          "x": {"field": "exp_bin", "type": "quantitative", "title": "Tapasztalat (Évek)"},
+          "y": {"field": "annual_income_usd", "aggregate": "mean", "type": "quantitative", "title": "Átlagos Éves Bevétel ($)"},
+          "tooltip": [
+            {"field": "exp_bin", "type": "quantitative", "title": "Tapasztalat"},
+            {"field": "annual_income_usd", "aggregate": "mean", "type": "quantitative", "title": "Átlag Bevétel", "format": "$,.0f"}
+          ]
+        }
+      },
+
+      "viz3": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 350,
+        "data": csvConfig,
+        "mark": {"type": "bar", "cornerRadiusEnd": 4},
+        "encoding": {
+          "x": {"field": "hourly_rate_usd", "aggregate": "mean", "type": "quantitative", "title": "Átlagos Óradíj ($)"},
+          "y": {"field": "category", "type": "nominal", "sort": "-x", "title": "Kategória"},
+          "color": {"field": "category", "type": "nominal", "legend": null},
+          "tooltip": [
+            {"field": "category", "type": "nominal", "title": "Kategória"},
+            {"field": "hourly_rate_usd", "aggregate": "mean", "type": "quantitative", "format": "$.2f", "title": "Átlag Óradíj"}
+          ]
+        }
+      },
+
+      "viz4": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 350,
+        "data": csvConfig,
+        "mark": {"type": "circle", "size": 80, "opacity": 0.6},
+        "encoding": {
+          "x": {"field": "years_experience", "type": "quantitative", "title": "Tapasztalat (Évek)"},
+          "y": {"field": "hourly_rate_usd", "type": "quantitative", "title": "Óradíj ($)"},
+          "color": {"field": "experience_level", "type": "nominal", "title": "Szint"},
+          "tooltip": [
+            {"field": "category", "type": "nominal", "title": "Kategória"},
+            {"field": "years_experience", "type": "quantitative", "title": "Évek"},
+            {"field": "hourly_rate_usd", "type": "quantitative", "title": "Óradíj"},
+            {"field": "experience_level", "type": "nominal", "title": "Szint"}
+          ]
+        }
+      },
+
+      "viz5": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 350,
+        "data": csvConfig,
+        "mark": "boxplot",
+        "encoding": {
+          "x": {"field": "education", "type": "nominal", "title": "Végzettség"},
+          "y": {"field": "hourly_rate_usd", "type": "quantitative", "title": "Óradíj ($)"},
+          "color": {"field": "education", "type": "nominal", "legend": null},
+          "tooltip": [
+            {"field": "education", "type": "nominal", "title": "Végzettség"},
+            {"field": "hourly_rate_usd", "type": "quantitative", "title": "Óradíj"}
+          ]
+        }
+      },
+
+      "viz6": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 450,
+        "data": csvConfig,
+        "mark": "rect",
+        "encoding": {
+          "x": {"field": "region", "type": "nominal", "title": "Régió"},
+          "y": {"field": "category", "type": "nominal", "title": "Kategória"},
+          "color": {
+            "field": "hourly_rate_usd",
+            "aggregate": "mean",
+            "type": "quantitative",
+            "title": "Átlag Óradíj ($)",
+            "scale": {"scheme": "viridis"}
+          },
+          "tooltip": [
+            {"field": "region", "type": "nominal", "title": "Régió"},
+            {"field": "category", "type": "nominal", "title": "Kategória"},
+            {"field": "hourly_rate_usd", "aggregate": "mean", "type": "quantitative", "format": "$.2f", "title": "Átlag Óradíj"}
+          ]
+        }
+      },
+
+      "viz7": {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+        "width": "container",
+        "height": 350,
+        "data": {
+           "values": [
+            {"skills_list": "Network Security", "avg_hourly": 139.75, "count": 35},
+            {"skills_list": "Cryptography", "avg_hourly": 138.99, "count": 32},
+            {"skills_list": "Penetration Testing", "avg_hourly": 138.74, "count": 30},
+            {"skills_list": "Security Audit", "avg_hourly": 138.69, "count": 30},
+            {"skills_list": "React Native", "avg_hourly": 113.84, "count": 23},
+            {"skills_list": "Swift", "avg_hourly": 113.80, "count": 22},
+            {"skills_list": "Kotlin", "avg_hourly": 112.92, "count": 18},
+            {"skills_list": "Data Science", "avg_hourly": 105.77, "count": 24},
+            {"skills_list": "CI/CD", "avg_hourly": 102.73, "count": 29},
+            {"skills_list": "Jenkins", "avg_hourly": 101.40, "count": 19},
+            {"skills_list": "Kubernetes", "avg_hourly": 100.86, "count": 26},
+            {"skills_list": "Ruby", "avg_hourly": 100.22, "count": 22},
+            {"skills_list": "Terraform", "avg_hourly": 99.80, "count": 27},
+            {"skills_list": "Computer Vision", "avg_hourly": 99.45, "count": 28},
+            {"skills_list": "TensorFlow", "avg_hourly": 98.71, "count": 30}
+           ]
+        },
+        "mark": {"type": "bar", "cornerRadiusEnd": 4},
+        "encoding": {
+          "x": {"field": "avg_hourly", "type": "quantitative", "title": "Átlagos Óradíj ($)"},
+          "y": {"field": "skills_list", "type": "nominal", "sort": "-x", "title": "Készség"},
+          "color": {"field": "avg_hourly", "type": "quantitative", "legend": null, "scale": {"scheme": "viridis"}},
+          "tooltip": [
+            {"field": "skills_list", "title": "Készség"},
+            {"field": "avg_hourly", "title": "Átlag Óradíj", "format": "$.2f"},
+            {"field": "count", "title": "Darabszám"}
+          ]
+        }
+      }
+    };
+
+    function renderCharts() {
+        vegaEmbed('#viz1', specs.viz1, embedOpt);
+        vegaEmbed('#viz2', specs.viz2, embedOpt);
+        vegaEmbed('#viz3', specs.viz3, embedOpt);
+        vegaEmbed('#viz4', specs.viz4, embedOpt);
+        vegaEmbed('#viz5', specs.viz5, embedOpt);
+        vegaEmbed('#viz6', specs.viz6, embedOpt);
+        vegaEmbed('#viz7', specs.viz7, embedOpt);
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCharts);
+</script>
+
 </body>
 </html>
-
-
